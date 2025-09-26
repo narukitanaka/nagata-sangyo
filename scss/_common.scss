@@ -1,0 +1,328 @@
+@use "variable" as v;
+/*************************************************
+common-style
+*************************************************/
+@mixin base_width {
+  margin: 0 auto;
+  width: 1200px;
+}
+// @extendでスタイルの継承
+// @mixinでステイルの定義
+// @includeでmixinの呼び出し
+
+// ブレイクポイント
+// PC基準でコーディングする場合
+$breakpoints: (
+  "sm-s": "screen and (max-width: 430px)",
+  //スマホ 小
+  "sm": "screen and (max-width: 750px)",
+  //スマホ
+  "md-s": "screen and (max-width: 899px)",
+  //タブレット
+  "md": "screen and (max-width: 1023px)",
+  //タブレット
+  "pc-s": "screen and (max-width: 1280px)",
+  //PC小サイズ
+) !default;
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints , $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin flex($justify: 0, $align: 0, $wrap: 0, $wrap_align: 0) {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  // justify-content水平方向揃え（第一引数）
+  @if $justify == start {
+    // 左揃え
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  } @else if $justify == end {
+    // 右揃え
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  } @else if $justify == center {
+    // 中央揃え
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  } @else if $justify == between {
+    // 両端配置
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  } @else if $justify == around {
+    // 均等配置
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  // align-items垂直方向揃え（第二引数）
+  @if $align == start {
+    // 上揃え
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  } @else if $align == end {
+    // 下揃え
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  } @else if $align == center {
+    // 中央揃え
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  } @else if $align == baseline {
+    // ベースライン
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  } @else if $align == stretch {
+    // 高さ揃え
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+
+  // flex-wrap子要素の折り返し設定（第三引数）
+  @if $wrap == nowrap {
+    // 折り返ししない
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  } @else if $wrap == wrap {
+    // 上から下
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  } @else if $wrap == reverse {
+    // 下から上
+    -webkit-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+  }
+
+  // align-content複数行設定（第四引数）
+  @if $wrap_align == start {
+    // 上揃え
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+  } @else if $wrap_align == end {
+    // 下揃え
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+  } @else if $wrap_align == center {
+    // 中央揃え
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+  } @else if $wrap_align == between {
+    // 両端配置
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+  } @else if $wrap_align == around {
+    // 均等配置
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+  } @else if $wrap_align == stretch {
+    // 高さ揃え
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+  }
+}
+
+@mixin center($use-left: true, $use-top: true) {
+  @if $use-left {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if $use-top {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @if $use-left and $use-top {
+    transform: translate(-50%, -50%);
+  }
+}
+
+$min-font-size: 10px;
+@mixin p-font($size) {
+  font-size: max(#{$min-font-size}, #{$size});
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: YakuHanJP, "Noto Sans JP", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+  min-height: 100dvh;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+// /iOSでのデフォルトスタイルをリセット /
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  &::-webkit-search-decoration {
+    display: none;
+  }
+  &:focus {
+    outline-offset: -2px;
+  }
+}
+
+.inner {
+  max-width: v.pxtovw(1000);
+  margin: 0 auto;
+  // @include mq(pc-s) {
+  //   padding: 0 2rem;
+  // }
+  // @include mq(md) {
+  //   width: 85%;
+  //   max-width: 1000px;
+  //   padding: 0;
+  // }
+  @include mq() {
+    width: auto;
+    max-width: v.pxtovw_sp(630);
+  }
+}
+
+h2 {
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+}
+
+h3,
+div,
+p,
+li,
+dt,
+dd,
+th,
+td,
+a {
+  @include p-font(v.pxtovw(16));
+  line-height: 1.7;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+  color: v.$txt-color;
+}
+div {
+  line-height: 1;
+}
+
+.font-noto {
+  font-family: "Noto Sans JP", sans-serif;
+}
+.font-oldmin {
+  font-family: "Zen Old Mincho", serif;
+}
+.en,
+.font-cormorant {
+  font-family: "Cormorant Garamond", serif;
+}
+.en-helv {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.img-box {
+  img {
+    width: 100%;
+  }
+}
+
+.obj-fit {
+  img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.block {
+  &:has(> .left, > .right) {
+    display: flex;
+  }
+}
+
+.text-ell {
+  dd {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.text-ell-line02 {
+  dd {
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* 2行に制限 */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+}
+
+.ashirai {
+  pointer-events: none;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+}
+
+// .hover_opacity {
+//   a {
+//     transition: all 0.3s;
+//     &:hover {
+//       opacity: 0.5;
+//     }
+//   }
+// }
+
+// .img-box {
+//   &:has(.parallax) {
+//     transform: translateZ(0) !important;
+//     isolation: isolate !important;
+//   }
+// }
+
+// .parallax-bg {
+//   background-size: 125% !important;
+// }

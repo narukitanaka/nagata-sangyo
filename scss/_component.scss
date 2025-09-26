@@ -1,0 +1,172 @@
+@use "variable" as v;
+@use "common" as c;
+/*************************************************
+component
+*************************************************/
+//トップ_セクション見出し
+.ttl-wrap {
+  .sub-ttl {
+    display: inline-block;
+    @include c.p-font(v.pxtovw(16));
+    font-weight: 600;
+    background: v.$gradient01;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  h2 {
+    font-family: "Zen Old Mincho", serif;
+    font-size: v.pxtovw(40);
+    font-weight: 500;
+  }
+}
+
+//ボタン
+.btn01 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: v.pxtovw(14);
+  font-weight: 600;
+  color: v.$sub-color01;
+  border-radius: 100vmax;
+  width: auto;
+  aspect-ratio: 1/0.26;
+  padding: 0 v.pxtovw(36) 0 v.pxtovw(64);
+  box-shadow: inset 0 0 v.pxtovw(15) rgba(62, 176, 249, 0.5);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: v.pxtovw(24);
+    width: v.pxtovw(8);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: v.$sub-color01;
+    transition: all 0.3s;
+  }
+}
+
+.header-btn {
+  position: relative;
+  @include c.flex(center, center);
+  width: v.pxtovw(148);
+  aspect-ratio: 1/0.3;
+  @include c.p-font(v.pxtovw(12));
+  font-weight: 700;
+  color: #fff;
+  border-radius: 100vmax;
+  padding-left: v.pxtovw(15);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: v.pxtovw(18);
+    width: v.pxtovw(8);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.3s;
+  }
+  &.orange {
+    background: linear-gradient(
+      270deg,
+      rgba(240, 194, 0, 1) 0%,
+      rgba(230, 133, 0, 1) 100%
+    );
+  }
+  &.blue {
+    background: linear-gradient(
+      270deg,
+      rgba(27, 183, 235, 1) 0%,
+      rgba(29, 88, 142, 1) 100%
+    );
+  }
+}
+
+//スライドテキスト
+.slider-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  .slider-track {
+    display: flex;
+    animation: slide 20s linear infinite;
+    p {
+      flex-shrink: 0;
+      margin-right: v.pxtovw(20);
+    }
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+//パンくず
+.breadcrumbs {
+  padding-top: v.pxtovw(30);
+  .inner {
+    max-width: v.pxtovw(1286);
+  }
+  ul {
+    @include c.flex(end, center);
+    gap: v.pxtovw(32);
+    li,
+    a {
+      @include c.p-font(v.pxtovw(14));
+      font-weight: 500;
+    }
+    li {
+      &:has(> a) {
+        position: relative;
+        &::after {
+          content: "";
+          width: v.pxtovw(5);
+          aspect-ratio: 1/2;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: v.pxtovw(-20);
+          background: url(../images/common/icon-arrow01.svg) no-repeat
+            center/contain;
+        }
+      }
+      &:last-of-type {
+        color: v.$sub-color01;
+      }
+    }
+  }
+}
+
+//aboutスライダーページネーション
+.about-swiper_pagenation {
+  .swiper-button-prev,
+  .swiper-button-next {
+    flex-direction: column;
+    gap: v.pxtovw(6);
+    width: clamp(4rem, v.pxtovw(60), 8rem);
+    height: clamp(4rem, v.pxtovw(60), 8rem);
+    border-radius: v.pxtovw(7);
+    background-color: #fff;
+    border: 1px solid v.$sub-color01;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    @include c.p-font(v.pxtovw(12));
+    color: v.$sub-color01;
+    &::after {
+      display: none;
+    }
+  }
+  .swiper-button-prev {
+    svg {
+      rotate: 180deg;
+    }
+  }
+}

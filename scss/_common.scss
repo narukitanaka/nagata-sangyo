@@ -326,3 +326,82 @@ div {
 // .parallax-bg {
 //   background-size: 125% !important;
 // }
+
+.test_wrap {
+  padding-top: v.pxtovw(150);
+  padding-bottom: v.pxtovw(100);
+}
+
+.custom-tbl {
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    td,
+    th {
+      background-color: #fff;
+      padding: 1rem;
+      border: 1px solid #000;
+    }
+    th {
+      text-align: center;
+      color: #fff;
+      background-color: #ccc;
+    }
+    // th + th {
+    //   border-left: 1px solid #fff;
+    //   border-right: 1px solid #fff;
+    // }
+    td {
+      vertical-align: middle;
+    }
+    .group-namatan {
+      tr {
+        &:first-of-type {
+          td {
+            &:first-child {
+              text-align: center;
+              color: #fff;
+              background-color: #43a3b4;
+            }
+          }
+        }
+      }
+      td {
+        background-color: #f3fafa;
+      }
+    }
+    .group-paste {
+      tr {
+        &:first-of-type {
+          td {
+            &:first-child {
+              text-align: center;
+              color: #fff;
+              background-color: #448bb4;
+            }
+          }
+        }
+      }
+      td {
+        background-color: #f2f7fa;
+      }
+    }
+    .group-tsubu {
+      tr {
+        &:first-of-type {
+          td {
+            &:first-child {
+              text-align: center;
+              color: #fff;
+              background-color: #446fb4;
+            }
+          }
+        }
+      }
+      td {
+        background-color: #f2f3fb;
+      }
+    }
+  }
+}

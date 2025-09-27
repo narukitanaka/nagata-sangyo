@@ -137,6 +137,55 @@ div {
   writing-mode: vertical-rl;
 }
 
+.test_wrap {
+  padding-top: 10.4166666667vw;
+  padding-bottom: 6.9444444444vw;
+}
+
+.custom-tbl table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+.custom-tbl table td,
+.custom-tbl table th {
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #000;
+}
+.custom-tbl table th {
+  text-align: center;
+  color: #fff;
+  background-color: #ccc;
+}
+.custom-tbl table td {
+  vertical-align: middle;
+}
+.custom-tbl table .group-namatan tr:first-of-type td:first-child {
+  text-align: center;
+  color: #fff;
+  background-color: #43a3b4;
+}
+.custom-tbl table .group-namatan td {
+  background-color: #f3fafa;
+}
+.custom-tbl table .group-paste tr:first-of-type td:first-child {
+  text-align: center;
+  color: #fff;
+  background-color: #448bb4;
+}
+.custom-tbl table .group-paste td {
+  background-color: #f2f7fa;
+}
+.custom-tbl table .group-tsubu tr:first-of-type td:first-child {
+  text-align: center;
+  color: #fff;
+  background-color: #446fb4;
+}
+.custom-tbl table .group-tsubu td {
+  background-color: #f2f3fb;
+}
+
 .u-pc {
   display: block;
 }
@@ -901,7 +950,7 @@ component
   display: inline-block;
   font-size: max(10px, 1.1111111111vw);
   font-weight: 600;
-  background: linear-gradient(90deg, rgb(29, 88, 142) 0%, rgb(27, 183, 235) 100%);
+  background: linear-gradient(90deg, #1d588e 0%, #1bb7eb 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -910,6 +959,54 @@ component
   font-family: "Zen Old Mincho", serif;
   font-size: 2.7777777778vw;
   font-weight: 500;
+}
+
+.ttl-wrap02 .inline-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.ttl-wrap02 .inline-wrap::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 0.8333333333vw;
+  height: 0.8333333333vw;
+  border-radius: 50%;
+  background: linear-gradient(0deg, rgb(29, 88, 142) 0%, rgb(27, 183, 235) 100%);
+  padding: 0.1388888889vw;
+}
+.ttl-wrap02 .inline-wrap::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.1388888889vw;
+  width: 0.5555555556vw;
+  height: 0.5555555556vw;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.ttl-wrap02 .inline-wrap h2 {
+  position: relative;
+  display: inline-block;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 2.0833333333vw;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 2;
+  padding-left: 1.4583333333vw;
+}
+.ttl-wrap02 .inline-wrap h2::before {
+  content: "";
+  width: 200rem;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  transform: traslateY(-50%);
+  left: calc(100% + 1.6666666667vw);
+  background-color: #cecece;
 }
 
 .btn01 {
@@ -1046,6 +1143,51 @@ component
 }
 .about-swiper_pagenation .swiper-button-prev svg {
   rotate: 180deg;
+}
+
+.item .ttl {
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
+  padding: 0.6944444444vw 0;
+  border-bottom-left-radius: 0.6944444444vw;
+  border-bottom-right-radius: 0.6944444444vw;
+}
+
+.block_image-txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block_image-txt .left {
+  width: 34.7222222222vw;
+  flex-shrink: 0;
+}
+.block_image-txt .left .ttl .en {
+  display: inline-block;
+  font-size: max(10px, 1.1111111111vw);
+  font-weight: 600;
+  background: linear-gradient(90deg, #1d588e 0%, #1bb7eb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.625vw;
+}
+.block_image-txt .left .ttl h3 {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 1.8055555556vw;
+  padding-bottom: 0.6944444444vw;
+  border-bottom: 1px solid #cecece;
+}
+.block_image-txt .left .txt {
+  line-height: 2.25;
+}
+.block_image-txt .right {
+  flex-grow: 1;
+}
+.block_image-txt .right .img-box {
+  border-radius: 0.9722222222vw;
+  overflow: hidden;
 }
 
 /*************************************************
@@ -1394,7 +1536,7 @@ top
   left: 0;
   width: 100%;
   height: 3.8194444444vw;
-  background: linear-gradient(45deg, rgb(29, 88, 142) 0%, rgb(27, 183, 235) 100%);
+  background: linear-gradient(45deg, #1d588e 0%, #1bb7eb 100%);
   z-index: -1;
 }
 .fv .fv_text .en-helv {
@@ -1590,7 +1732,7 @@ top
   padding: 7.9166666667vw 0 8.6805555556vw;
   border-radius: 6.9444444444vw;
   margin-top: -5.8333333333vw;
-  background: linear-gradient(225deg, rgb(247, 250, 255) 0%, rgb(229, 238, 247) 100%);
+  background: linear-gradient(225deg, #f7faff 0%, #e5eef7 100%);
 }
 .wrap_product .inner > p {
   text-align: center;
@@ -1726,7 +1868,7 @@ top
   height: 100%;
   border-top-left-radius: 7.5vw;
   border-bottom-left-radius: 7.5vw;
-  background: linear-gradient(45deg, rgb(237, 243, 248) 0%, rgb(247, 248, 250) 100%);
+  background: linear-gradient(45deg, #edf3f8 0%, #f7f8fa 100%);
 }
 .wrap_news .block {
   position: relative;
@@ -1939,7 +2081,7 @@ single
 下層共通
 *************************************************/
 .p-under_kvbg {
-  background: linear-gradient(225deg, rgb(247, 250, 255) 0%, rgb(229, 238, 247) 100%);
+  background: linear-gradient(225deg, #f7faff 0%, #e5eef7 100%);
 }
 
 .under_kv {
@@ -2077,7 +2219,7 @@ single
   display: inline-block;
   font-size: max(10px, 0.8333333333vw);
   font-weight: 600;
-  background: linear-gradient(90deg, rgb(29, 88, 142) 0%, rgb(27, 183, 235) 100%);
+  background: linear-gradient(90deg, #1d588e 0%, #1bb7eb 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2255,7 +2397,7 @@ single
   font-size: 3.4722222222vw;
   font-weight: 500;
   line-height: 1;
-  background: linear-gradient(90deg, rgb(29, 88, 142) 0%, rgb(27, 183, 235) 100%);
+  background: linear-gradient(90deg, #1d588e 0%, #1bb7eb 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2292,7 +2434,7 @@ single
 
 .about_research {
   padding: 7.5694444444vw 0 7.2916666667vw;
-  background: linear-gradient(45deg, rgb(237, 243, 248) 0%, rgb(247, 248, 250) 100%);
+  background: linear-gradient(45deg, #edf3f8 0%, #f7f8fa 100%);
 }
 .about_research .block {
   gap: 4.7222222222vw;
@@ -2346,4 +2488,172 @@ single
 .about_research .research-block .box p {
   font-size: max(10px, 0.9722222222vw);
   line-height: 2;
+}
+
+/*************************************************
+受託加工
+*************************************************/
+.machining_intro {
+  position: relative;
+  padding: 6.25vw 0 1.3888888889vw;
+  z-index: 0;
+}
+.machining_intro .block {
+  gap: 3.9583333333vw;
+}
+.machining_intro .block .left {
+  width: 34.2361111111vw;
+  flex-shrink: 0;
+}
+.machining_intro .block .left .ttl-wrap {
+  margin-bottom: 2.0833333333vw;
+}
+.machining_intro .block .left .ttl-wrap .sub-ttl {
+  margin-bottom: 1.0416666667vw;
+}
+.machining_intro .block .left p {
+  line-height: 2.25;
+}
+.machining_intro .block .right {
+  flex-grow: 1;
+}
+.machining_intro .block .right .hukidashi {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17.2222222222vw;
+  aspect-ratio: 1/0.15;
+  border-radius: 100vmax;
+  background-color: #35627c;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 auto 1.25vw;
+}
+.machining_intro .block .right .hukidashi::before {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-top: 9px solid #35627c;
+  border-bottom: 0;
+}
+.machining_intro .block .right .block {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 2.0833333333vw;
+       column-gap: 2.0833333333vw;
+  row-gap: 1.3888888889vw;
+}
+.machining_intro .block .right .block .box {
+  font-size: max(10px, 0.9722222222vw);
+  width: calc(50% - 1.0416666667vw);
+}
+.machining_intro .block .right .block .box .ttl {
+  background-color: #49abe0;
+}
+.machining_intro .slider-txt_assignment {
+  position: relative;
+  z-index: -1;
+  margin-top: -4.1666666667vw;
+}
+.machining_intro .slider-txt_assignment p {
+  font-size: 9.9305555556vw;
+  line-height: 1.2;
+  color: #f1f6f9;
+}
+
+.machining_facility {
+  position: relative;
+  padding: 5.3472222222vw 0 2.0833333333vw;
+}
+.machining_facility .ttl-wrap02 {
+  margin-bottom: 1.5972222222vw;
+}
+.machining_facility > p {
+  margin-bottom: 2.7777777778vw;
+}
+.machining_facility .block {
+  margin-bottom: 4.1666666667vw;
+}
+.machining_facility .block:last-of-type {
+  margin-bottom: 0;
+}
+.machining_facility .block h3 {
+  position: relative;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 1.5277777778vw;
+  line-height: 1;
+  font-weight: 500;
+  padding-left: 0.9722222222vw;
+  margin-bottom: 1.3888888889vw;
+}
+.machining_facility .block h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.2777777778vw;
+  height: 100%;
+  background: linear-gradient(0deg, rgb(29, 88, 142) 0%, rgb(27, 183, 235) 100%);
+}
+.machining_facility .block > div {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 2.4305555556vw;
+       column-gap: 2.4305555556vw;
+  row-gap: 2.0833333333vw;
+}
+.machining_facility .block .box {
+  width: calc(33.3333333333% - 1.6203703704vw);
+  border-radius: 0.6944444444vw;
+  overflow: hidden;
+}
+.machining_facility .block .box .ttl {
+  font-size: 1.25vw;
+  font-weight: 500;
+  background-color: #458bb4;
+}
+.machining_facility .big-txt {
+  position: relative;
+  margin-top: -6.9444444444vw;
+  font-size: 15.2777777778vw;
+  text-align: center;
+  line-height: 1;
+  color: #f2f7fa;
+  z-index: -1;
+}
+
+.machining_point {
+  position: relative;
+  padding: 6.6666666667vw 0 7.6388888889vw;
+}
+.machining_point::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 92.5vw;
+  height: 100%;
+  background: linear-gradient(45deg, #edf3f8 0%, #f7f8fa 100%);
+  z-index: -1;
+}
+.machining_point .ttl-wrap02 {
+  margin-bottom: 3.125vw;
+}
+.machining_point .block_image-txt {
+  gap: 4.0972222222vw;
+  margin-bottom: 2.7777777778vw;
+}
+.machining_point .block_image-txt:last-of-type {
+  margin-bottom: 0;
+}
+.machining_point .block_image-txt .left .ttl {
+  margin-bottom: 1.1111111111vw;
 }

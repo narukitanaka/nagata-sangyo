@@ -414,3 +414,173 @@
     }
   }
 }
+
+/*************************************************
+受託加工
+*************************************************/
+.machining_intro {
+  position: relative;
+  padding: v.pxtovw(90) 0 v.pxtovw(20);
+  z-index: 0;
+  .block {
+    gap: v.pxtovw(57);
+    .left {
+      width: v.pxtovw(493);
+      flex-shrink: 0;
+      .ttl-wrap {
+        margin-bottom: v.pxtovw(30);
+        .sub-ttl {
+          margin-bottom: v.pxtovw(15);
+        }
+      }
+      p {
+        line-height: 2.25;
+      }
+    }
+    .right {
+      flex-grow: 1;
+      .hukidashi {
+        position: relative;
+        @include c.flex(center, center);
+        width: v.pxtovw(248);
+        aspect-ratio: 1/0.15;
+        border-radius: 100vmax;
+        background-color: v.$sub-color04;
+        font-weight: 600;
+        color: #fff;
+        margin: 0 auto v.pxtovw(18);
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -7px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-right: 4px solid transparent;
+          border-left: 4px solid transparent;
+          border-top: 9px solid v.$sub-color04;
+          border-bottom: 0;
+        }
+      }
+      .block {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: v.pxtovw(30);
+        row-gap: v.pxtovw(20);
+        .box {
+          @include c.p-font(v.pxtovw(14));
+          width: calc(100% / 2 - v.pxtovw(15));
+          .ttl {
+            background-color: v.$sub-color01;
+          }
+        }
+      }
+    }
+  }
+  .slider-txt_assignment {
+    position: relative;
+    z-index: -1;
+    margin-top: v.pxtovw(-60);
+    p {
+      font-size: v.pxtovw(143);
+      line-height: 1.2;
+      color: #f1f6f9;
+    }
+  }
+}
+
+.machining_facility {
+  position: relative;
+  padding: v.pxtovw(77) 0 v.pxtovw(30);
+  .ttl-wrap02 {
+    margin-bottom: v.pxtovw(23);
+  }
+  > p {
+    margin-bottom: v.pxtovw(40);
+  }
+  .block {
+    margin-bottom: v.pxtovw(60);
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    h3 {
+      position: relative;
+      font-family: "Zen Old Mincho", serif;
+      font-size: v.pxtovw(22);
+      line-height: 1;
+      font-weight: 500;
+      padding-left: v.pxtovw(14);
+      margin-bottom: v.pxtovw(20);
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: v.pxtovw(4);
+        height: 100%;
+        background: linear-gradient(
+          0deg,
+          rgba(29, 88, 142, 1) 0%,
+          rgba(27, 183, 235, 1) 100%
+        );
+      }
+    }
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: v.pxtovw(35);
+      row-gap: v.pxtovw(30);
+    }
+    .box {
+      width: calc(100% / 3 - (v.pxtovw(70) / 3));
+      border-radius: v.pxtovw(10);
+      overflow: hidden;
+      .ttl {
+        font-size: v.pxtovw(18);
+        font-weight: 500;
+        background-color: v.$sub-color05;
+      }
+    }
+  }
+  .big-txt {
+    position: relative;
+    margin-top: v.pxtovw(-100);
+    font-size: v.pxtovw(220);
+    text-align: center;
+    line-height: 1;
+    color: v.$sub-color03;
+    z-index: -1;
+  }
+}
+
+.machining_point {
+  position: relative;
+  padding: v.pxtovw(96) 0 v.pxtovw(110);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: v.pxtovw(1332);
+    height: 100%;
+    background: v.$gradient04;
+    z-index: -1;
+  }
+  .ttl-wrap02 {
+    margin-bottom: v.pxtovw(45);
+  }
+  .block_image-txt {
+    gap: v.pxtovw(59);
+    margin-bottom: v.pxtovw(40);
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    .left {
+      .ttl {
+        margin-bottom: v.pxtovw(16);
+      }
+    }
+  }
+}

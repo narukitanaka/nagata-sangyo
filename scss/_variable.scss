@@ -3,32 +3,39 @@ $txt-color: #000 !default;
 $sub-color01: #49abe0;
 $sub-color02: #1d74a8;
 $sub-color03: #f2f7fa;
+$sub-color04: #35627c;
+$sub-color05: #458bb4;
 
-$gradient01: linear-gradient(
-  90deg,
-  rgba(29, 88, 142, 1) 0%,
-  rgba(27, 183, 235, 1) 100%
-);
-$gradient02: linear-gradient(
-  45deg,
-  rgba(29, 88, 142, 1) 0%,
-  rgba(27, 183, 235, 1) 100%
-);
-$gradient03: linear-gradient(
-  225deg,
-  rgba(247, 250, 255, 1) 0%,
-  rgba(229, 238, 247, 1) 100%
-);
-$gradient04: linear-gradient(
-  45deg,
-  rgba(237, 243, 248, 1) 0%,
-  rgba(247, 248, 250, 1) 100%
-);
-$gradient05: linear-gradient(
-  225deg,
-  rgba(247, 250, 255, 1) 0%,
-  rgba(229, 238, 247, 1) 100%
-);
+// $gradient01: linear-gradient(
+//   90deg,
+//   rgba(29, 88, 142, 1) 0%,
+//   rgba(27, 183, 235, 1) 100%
+// );
+// $gradient02: linear-gradient(
+//   45deg,
+//   rgba(29, 88, 142, 1) 0%,
+//   rgba(27, 183, 235, 1) 100%
+// );
+// $gradient03: linear-gradient(
+//   225deg,
+//   rgba(247, 250, 255, 1) 0%,
+//   rgba(229, 238, 247, 1) 100%
+// );
+// $gradient04: linear-gradient(
+//   45deg,
+//   rgba(237, 243, 248, 1) 0%,
+//   rgba(247, 248, 250, 1) 100%
+// );
+// $gradient05: linear-gradient(
+//   225deg,
+//   rgba(247, 250, 255, 1) 0%,
+//   rgba(229, 238, 247, 1) 100%
+// );
+$gradient01: linear-gradient(90deg, #1d588e 0%, #1bb7eb 100%);
+$gradient02: linear-gradient(45deg, #1d588e 0%, #1bb7eb 100%);
+$gradient03: linear-gradient(225deg, #f7faff 0%, #e5eef7 100%);
+$gradient04: linear-gradient(45deg, #edf3f8 0%, #f7f8fa 100%);
+$gradient05: linear-gradient(225deg, #f7faff 0%, #e5eef7 100%);
 // $shadow01: 0px 0px 8px rgba(#000, 0.16);
 
 //vwを自動計算

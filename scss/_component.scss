@@ -89,6 +89,7 @@ component
   aspect-ratio: 1/0.26;
   padding: 0 v.pxtovw(36) 0 v.pxtovw(64);
   box-shadow: inset 0 0 v.pxtovw(15) rgba(62, 176, 249, 0.5);
+  transition: all 0.3s;
   &::before {
     content: "";
     position: absolute;
@@ -100,6 +101,34 @@ component
     border-radius: 50%;
     background-color: v.$sub-color01;
     transition: all 0.3s;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    right: v.pxtovw(25);
+    width: v.pxtovw(20);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.3s;
+  }
+  &:hover {
+    color: #fff;
+    padding: 0 v.pxtovw(60) 0 v.pxtovw(40);
+    box-shadow: none;
+    background: linear-gradient(
+      270deg,
+      rgba(27, 183, 235, 1) 0%,
+      rgba(29, 88, 142, 1) 100%
+    );
+    &::before {
+      transform: translateY(-50%) scale(0);
+    }
+    &::after {
+      transform: translateY(-50%) scale(1);
+    }
   }
 }
 
@@ -113,17 +142,40 @@ component
   color: #fff;
   border-radius: 100vmax;
   padding-left: v.pxtovw(15);
+  transition: all 0.3s;
   &::before {
     content: "";
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: v.pxtovw(18);
-    width: v.pxtovw(8);
+    width: v.pxtovw(7);
     aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: #fff;
     transition: all 0.3s;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    right: v.pxtovw(18);
+    width: v.pxtovw(15);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.3s;
+  }
+  &:hover {
+    padding-left: v.pxtovw(0);
+    padding-right: v.pxtovw(10);
+    &::before {
+      transform: translateY(-50%) scale(0);
+    }
+    &::after {
+      transform: translateY(-50%) scale(1);
+    }
   }
   &.orange {
     background: linear-gradient(

@@ -128,6 +128,13 @@ top
     }
   }
 
+  .bg-blur {
+    position: absolute;
+    top: v.pxtovw(80);
+    left: v.pxtovw(120);
+    width: v.pxtovw(1200);
+  }
+
   .fv-images {
     position: relative;
     display: inline-block;
@@ -267,6 +274,15 @@ top
     row-gap: v.pxtovw(28);
     .banner {
       grid-column: span 3;
+      a {
+        &:hover {
+          .img-box {
+            img {
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
     }
     .box {
       grid-column: span 2;
@@ -278,12 +294,20 @@ top
     > div {
       a {
         &:hover {
+          .img-box {
+            img {
+              transform: scale(1.1);
+            }
+          }
           p {
             color: v.$sub-color02;
           }
         }
         .img-box {
           margin-bottom: v.pxtovw(12);
+          img {
+            transition: all 0.3s;
+          }
         }
         p {
           position: relative;
@@ -407,6 +431,10 @@ top
       flex-shrink: 0;
       .banner {
         margin-bottom: v.pxtovw(52);
+        transition: all 0.3s;
+        &:hover {
+          transform: scale(1.05);
+        }
       }
     }
   }
@@ -419,6 +447,10 @@ top
       @include c.flex(start, center);
       gap: v.pxtovw(20);
       padding: v.pxtovw(30) 0 v.pxtovw(26);
+      transition: all 0.3s;
+      &:hover {
+        padding-left: v.pxtovw(20);
+      }
       dt {
         width: v.pxtovw(134);
         flex-shrink: 0;
@@ -477,6 +509,12 @@ top
 
 .banner-quality {
   margin-bottom: v.pxtovw(66);
+  .img-box {
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
 }
 
 .wrap_images {
@@ -520,8 +558,27 @@ top
     }
     .left,
     .right {
+      position: relative;
       flex-basis: 50%;
       aspect-ratio: 1/0.42;
+      background: v.$gradient01;
+      z-index: 0;
+      &:hover {
+        transition: all 0.3s;
+        &::before {
+          opacity: 0.7;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: all 0.3s;
+      }
       a {
         position: relative;
         @include c.flex(center, center);
@@ -532,6 +589,7 @@ top
         font-weight: 500;
         font-size: v.pxtovw(26);
         color: #fff;
+        z-index: 2;
         .en {
           @include c.p-font(v.pxtovw(16));
           font-weight: 600;
@@ -573,10 +631,16 @@ top
       }
     }
     .left {
-      background: url(../images/common/cta_bg-img01.jpg) no-repeat center/cover;
+      &::before {
+        background: url(../images/common/cta_bg-img01.png) no-repeat
+          center/cover;
+      }
     }
     .right {
-      background: url(../images/common/cta_bg-img02.jpg) no-repeat center/cover;
+      &::before {
+        background: url(../images/common/cta_bg-img02.png) no-repeat
+          center/cover;
+      }
     }
   }
   .slider-txt_cta {

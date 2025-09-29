@@ -49,6 +49,7 @@
             <li><a href="about.html">私たちについて</a></li>
             <li class="parent">
               <a href="products.html">製品紹介</a>
+              <span class="plus"></span>
               <div class="mega-menu">
                 <ul>
                   <li>
@@ -87,12 +88,15 @@
             </li>
             <li><a href="machining.html">受託加工</a></li>
             <li><a href="archive.html">お知らせ</a></li>
-            <li><a href="company.html">企業情報</a></li>
+            <li class="parent">
+              <a href="company.html">企業情報</a>
+              <span class="plus"></span>
+            </li>
           </ul>
         </nav>
 
         <div class="btn-area">
-          <a class=" header-btn orange" href="#">採用情報</a>
+          <a class=" header-btn orange" href="https://nagatagroup-recruit.org/">採用情報</a>
           <a class=" header-btn blue" href="contact.html">お問い合わせ</a>
         </div>
       </div>
@@ -117,180 +121,122 @@
 
   <main>
 
-
-    <div class="fv">
-      <div class="fv_text">
-        <div class="main-copy">
-          まだ誰<span class="small">も</span>知らない<br>
-          小麦<span class="small">の</span><span class="txt-bg">可能性</span>へ。
-        </div>
-        <p class="en-helv">Towards the untapped potential of wheat.</p>
-        <p class="txt">
-          高品質な原料を安定して届けること。ニーズに応える研究開発を続けること。<br>
-          それは「小麦の可能性を追求する」という創業時から変わらない想いです。
-        </p>
-      </div>
-
-      <div class="fv-slider swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="img-box"><img src="images/top/top_fv-img01-1.jpg" alt=""></div>
+    <div class="hidden">
+      <div class="fv">
+        <div class="fv_text fv-point">
+          <div class="main-copy fvanime01">
+            まだ誰<span class="small">も</span>知らない<br>
+            小麦<span class="small">の</span><span class="txt-bg">可能性</span>へ。
           </div>
-          <div class="swiper-slide">
-            <div class="img-box"><img src="images/top/top_fv-img01-2.jpg" alt=""></div>
-          </div>
-          <div class="swiper-slide">
-            <div class="img-box"><img src="images/top/top_fv-img01-3.jpg" alt=""></div>
-          </div>
+          <p class="en-helv fvanime02">Towards the untapped potential of wheat.</p>
+          <p class="txt fvanime03">
+            高品質な原料を安定して届けること。ニーズに応える研究開発を続けること。<br>
+            それは「小麦の可能性を追求する」という創業時から変わらない想いです。
+          </p>
         </div>
-      </div>
 
-      <div class="swiper-pagination-custom">
-        <div class="pagination-dot" data-index="0">
-          <div class="dot-inner"></div>
-          <div class="progress-circle-container" data-index="0">
-            <svg class="progress-circle" width="40" height="40" viewBox="0 0 40 40">
-              <circle cx="20" cy="20" r="19" stroke="#ccc" stroke-width="1" fill="none" class="progress-bg" />
-              <circle cx="20" cy="20" r="19" stroke="#49abe0" stroke-width="1" fill="none" class="progress-ring" />
-            </svg>
-          </div>
-        </div>
-        <div class="pagination-dot" data-index="1">
-          <div class="dot-inner"></div>
-          <div class="progress-circle-container" data-index="1">
-            <svg class="progress-circle" width="40" height="40" viewBox="0 0 40 40">
-              <circle cx="20" cy="20" r="19" stroke="#ccc" stroke-width="1" fill="none" class="progress-bg" />
-              <circle cx="20" cy="20" r="19" stroke="#49abe0" stroke-width="1" fill="none" class="progress-ring" />
-            </svg>
-          </div>
-        </div>
-        <div class="pagination-dot" data-index="2">
-          <div class="dot-inner"></div>
-          <div class="progress-circle-container" data-index="2">
-            <svg class="progress-circle" width="40" height="40" viewBox="0 0 40 40">
-              <circle cx="20" cy="20" r="19" stroke="#ccc" stroke-width="1" fill="none" class="progress-bg" />
-              <circle cx="20" cy="20" r="19" stroke="#49abe0" stroke-width="1" fill="none" class="progress-ring" />
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          const swiper = new Swiper('.fv-slider', {
-            loop: true,
-            effect: 'fade',
-            fadeEffect: {
-              crossFade: true
-            },
-            autoplay: {
-              delay: 3000,
-              disableOnInteraction: false,
-            },
-            speed: 1000,
-            on: {
-              init: function () {
-                updatePagination(this.realIndex);
-                startProgressAnimation(this.realIndex);
-              },
-              slideChange: function () {
-                updatePagination(this.realIndex);
-                startProgressAnimation(this.realIndex);
-              }
-            }
-          });
-
-          function updatePagination(activeIndex) {
-            const dots = document.querySelectorAll('.pagination-dot');
-
-            dots.forEach((dot, index) => {
-              const isActive = index === activeIndex;
-              dot.classList.toggle('active', isActive);
-
-              if (!isActive) {
-                const progressRing = dot.querySelector('.progress-ring');
-                progressRing.style.strokeDashoffset = '119.38';
-              }
-            });
-          }
-
-          function startProgressAnimation(activeIndex) {
-            const activeDot = document.querySelector(`.pagination-dot[data-index="${activeIndex}"]`);
-            if (activeDot) {
-              const progressRing = activeDot.querySelector('.progress-ring');
-              progressRing.style.strokeDashoffset = '119.38';
-
-              setTimeout(() => {
-                progressRing.style.transition = 'stroke-dashoffset 3s linear';
-                progressRing.style.strokeDashoffset = '0';
-              }, 100);
-            }
-          }
-
-          // ドットクリックでスライド切り替え
-          document.querySelectorAll('.pagination-dot').forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-              swiper.slideToLoop(index);
-            });
-          });
-        });
-      </script>
-
-
-      <div class="fv-images">
-        <div class="img-box"><img src="images/top/top_fv-img02.jpg" alt=""></div>
-        <div class="img-box"><img src="images/top/top_fv-img03.jpg" alt=""></div>
-      </div>
-      <div class="slider-container slider-txt_fv">
-        <div class="slider-track">
-          <p class="en">TOWARDS THE UNTAPPED POTENTIAL OF WHEAT</p>
-          <p class="en">TOWARDS THE UNTAPPED POTENTIAL OF WHEAT</p>
-        </div>
-      </div>
-      <div class="ashirai img-box"><img src="images/common/logo-mark01.svg" alt=""></div>
-    </div><!-- /.fv -->
-
-    <section class="wrap_about">
-      <div class="inner">
-        <div class="block">
-          <div class="left">
-            <div class="ttl-wrap">
-              <div class="en sub-ttl">ABOUT US</div>
-              <h2>私たちについて</h2>
+        <div class="fv-slider swiper fvanime04">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="img-box"><img src="images/top/top_fv-img01-1.jpg" alt=""></div>
             </div>
-            <p>
-              私たち長田産業は、1953年の創業以来、小麦でん粉・小麦たん白の製造・供給を通じて、食をはじめとするさまざまな産業に携わってきました。高品質な原料を安定して届けること。ニーズに応える研究開発を続けること。それは「小麦の可能性を追求する」という創業時から変わらない想いです。<br>
-              また、長田産業は得意先のみではなく仕入先、そして事業を行う地域や従業員とその家族を大切にすることも私たちのコアにある考え方です。<br>
-              小麦と共に、地域と共に。<br>
-              私たちは70年を超える実績と信頼を礎に、これからも社会に貢献していきます。
-            </p>
-            <div class="btn-wrap">
-              <a class="btn01" href="about.html">私たちについて</a>
+            <div class="swiper-slide">
+              <div class="img-box"><img src="images/top/top_fv-img01-2.jpg" alt=""></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box"><img src="images/top/top_fv-img01-3.jpg" alt=""></div>
             </div>
           </div>
-          <div class="right">
-            <div class="copy-text">
-              <div class="copy img-box"><img src="images/top/top_about-verticaltxt.svg" alt="小麦と共に、地域と共に。"></div>
-              <div class="en">
-                Together with wheat, together<br>
-                with the community
+        </div>
+
+        <div class="swiper-pagination-custom fvanime05">
+          <div class="pagination-dot" data-index="0">
+            <div class="dot-inner"></div>
+            <div class="progress-circle-container" data-index="0">
+              <svg class="progress-circle" width="40" height="40" viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="19" stroke="#ccc" stroke-width="1" fill="none" class="progress-bg" />
+                <circle cx="20" cy="20" r="19" stroke="#49abe0" stroke-width="1" fill="none" class="progress-ring" />
+              </svg>
+            </div>
+          </div>
+          <div class="pagination-dot" data-index="1">
+            <div class="dot-inner"></div>
+            <div class="progress-circle-container" data-index="1">
+              <svg class="progress-circle" width="40" height="40" viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="19" stroke="#ccc" stroke-width="1" fill="none" class="progress-bg" />
+                <circle cx="20" cy="20" r="19" stroke="#49abe0" stroke-width="1" fill="none" class="progress-ring" />
+              </svg>
+            </div>
+          </div>
+          <div class="pagination-dot" data-index="2">
+            <div class="dot-inner"></div>
+            <div class="progress-circle-container" data-index="2">
+              <svg class="progress-circle" width="40" height="40" viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="19" stroke="#ccc" stroke-width="1" fill="none" class="progress-bg" />
+                <circle cx="20" cy="20" r="19" stroke="#49abe0" stroke-width="1" fill="none" class="progress-ring" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-blur img-box"><img src="images/top/fv-bg_blur.png" alt=""></div>
+
+
+        <div class="fv-images fvanime06">
+          <div class="img-box"><img src="images/top/top_fv-img02.jpg" alt=""></div>
+          <div class="img-box"><img src="images/top/top_fv-img03.jpg" alt=""></div>
+        </div>
+        <div class="slider-container slider-txt_fv fvanime07">
+          <div class="slider-track">
+            <p class="en">TOWARDS THE UNTAPPED POTENTIAL OF WHEAT</p>
+            <p class="en">TOWARDS THE UNTAPPED POTENTIAL OF WHEAT</p>
+          </div>
+        </div>
+        <div class="ashirai img-box parallax y100"><img src="images/common/logo-mark01.svg" alt=""></div>
+      </div><!-- /.fv -->
+
+      <section class="wrap_about">
+        <div class="inner">
+          <div class="block">
+            <div class="left">
+              <div class="ttl-wrap">
+                <div class="en sub-ttl">ABOUT US</div>
+                <h2>私たちについて</h2>
+              </div>
+              <p>
+                私たち長田産業は、1953年の創業以来、小麦でん粉・小麦たん白の製造・供給を通じて、食をはじめとするさまざまな産業に携わってきました。高品質な原料を安定して届けること。ニーズに応える研究開発を続けること。それは「小麦の可能性を追求する」という創業時から変わらない想いです。<br>
+                また、長田産業は得意先のみではなく仕入先、そして事業を行う地域や従業員とその家族を大切にすることも私たちのコアにある考え方です。<br>
+                小麦と共に、地域と共に。<br>
+                私たちは70年を超える実績と信頼を礎に、これからも社会に貢献していきます。
+              </p>
+              <div class="btn-wrap">
+                <a class="btn01" href="about.html">私たちについて</a>
               </div>
             </div>
-            <div class="img-box"><img src="images/top/top_about-img01.jpg" alt=""></div>
-            <div class="circle-txt">
-              <div class="img-box"><img src="images/common/circle-text01.svg"
-                  alt="Together with wheat, together with the community."></div>
+            <div class="right">
+              <div class="copy-text">
+                <div class="copy img-box"><img src="images/top/top_about-verticaltxt.svg" alt="小麦と共に、地域と共に。"></div>
+                <div class="en">
+                  Together with wheat, together<br>
+                  with the community
+                </div>
+              </div>
+              <div class="img-box"><img src="images/top/top_about-img01.jpg" alt=""></div>
+              <div class="circle-txt">
+                <div class="img-box"><img src="images/common/circle-text01.svg"
+                    alt="Together with wheat, together with the community."></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="slider-container slider-txt_ourproducts">
-        <div class="slider-track">
-          <p class="en">Our Products Our Products</p>
-          <p class="en">Our Products Our Products</p>
+        <div class="slider-container slider-txt_ourproducts">
+          <div class="slider-track">
+            <p class="en">Our Products Our Products</p>
+            <p class="en">Our Products Our Products</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <section class="wrap_product">
       <div class="inner">

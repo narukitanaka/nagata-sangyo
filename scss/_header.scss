@@ -4,12 +4,27 @@
 header
 *************************************************/
 header {
-  padding: v.pxtovw(22) v.pxtovw(49) v.pxtovw(28);
+  padding: 0 v.pxtovw(49);
   position: absolute;
   top: 0;
   width: 100%;
   border-bottom: 1px solid #fff;
   z-index: 999;
+  transform: translateY(0);
+  transition: transform 0.4s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  &.is-animating {
+    transition: none;
+  }
+  &.fixed {
+    position: fixed;
+    background-color: #fff;
+    // box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-100%);
+  }
+  &.fixed.fixed-enter {
+    transform: translateY(0);
+  }
   .header-inner {
     @include c.flex(between, center);
     .logo {
@@ -27,8 +42,67 @@ header {
         @include c.flex(center, center);
         gap: v.pxtovw(25);
         > li {
+          position: relative;
           align-self: stretch;
           @include c.flex(center, center);
+          padding: v.pxtovw(37) 0 v.pxtovw(35);
+          &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 1px;
+            background-color: #3eb1f9;
+            transition: width 0.3s ease;
+          }
+          &:hover {
+            &::after {
+              width: 100%;
+            }
+            .plus {
+              display: inline-block;
+              width: v.pxtovw(10);
+              aspect-ratio: 1/1;
+              position: relative;
+              margin-top: v.pxtovw(4);
+              margin-left: v.pxtovw(10);
+              &::after {
+                transform: translateX(-50%) scaleY(0);
+              }
+            }
+          }
+          .plus {
+            display: inline-block;
+            width: v.pxtovw(10);
+            aspect-ratio: 1/1;
+            position: relative;
+            margin-top: v.pxtovw(4);
+            margin-left: v.pxtovw(10);
+            &::before {
+              content: "";
+              width: 100%;
+              height: 1px;
+              background-color: #000;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: 0;
+            }
+            &::after {
+              content: "";
+              width: 1px;
+              height: 100%;
+              background-color: #000;
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translateX(-50%) scaleY(1);
+              transform-origin: 50% 50%;
+              transition: transform 0.25s ease; // ← transform をアニメ
+            }
+          }
           > a {
             font-weight: 500;
           }
@@ -39,18 +113,6 @@ header {
                 opacity: 1;
                 visibility: visible;
               }
-            }
-            &::after {
-              position: absolute;
-              top: 100%;
-              left: 0;
-              content: "";
-              display: inline-block;
-              width: 100%;
-              height: v.pxtovw(42);
-              transition: all 0.3s;
-              // opacity: 0;
-              z-index: 1000;
             }
           }
         }
@@ -68,11 +130,12 @@ header {
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    top: calc(100% + v.pxtovw(42));
+    top: calc(100% - 1px);
     left: 50%;
     transform: translateX(-50%);
     width: v.pxtovw(560);
     transition: all 0.3s;
+    z-index: 1;
     ul {
       display: flex;
       gap: 1px;

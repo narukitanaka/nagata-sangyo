@@ -73,6 +73,10 @@ footer {
         a {
           padding-bottom: 0.3rem;
           border-bottom: 1px solid #c7c7c7;
+          transition: all 0.3s;
+          &:hover {
+            opacity: 0.4;
+          }
         }
       }
       .copyright {
@@ -81,7 +85,6 @@ footer {
         left: 0;
         bottom: 0;
         small {
-          // @include c.p-font(v.pxtovw(14));
           font-size: v.pxtovw(14);
           font-weight: 600;
         }
@@ -103,6 +106,10 @@ footer {
               position: relative;
               font-weight: 500;
               padding: v.pxtovw(20) 0 v.pxtovw(24) v.pxtovw(45);
+              transition: all 0.3s;
+              &:hover {
+                opacity: 0.4;
+              }
               &::after {
                 content: "";
                 position: absolute;

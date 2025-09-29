@@ -72,7 +72,12 @@
     position: relative;
     z-index: 2;
     .about-swiper {
+      overflow: visible;
       width: v.pxtovw(602);
+      .swiper-slide {
+        opacity: 0;
+        will-change: opacity;
+      }
     }
     .swiper-list {
       position: absolute;
@@ -82,22 +87,38 @@
       ul {
         position: relative;
         padding-left: v.pxtovw(25);
+        --indicator-offset: 0px;
         &::before {
           content: "";
           width: 1px;
-          height: calc(100% - v.pxtovw(4));
+          height: calc(100% - v.pxtovw(5));
           background-color: v.$sub-color01;
           position: absolute;
           top: 50%;
-          transform: translateY(-50%);
           left: 0;
+          transform: translateY(-50%);
+        }
+        &::after {
+          content: "";
+          width: v.pxtovw(13);
+          height: v.pxtovw(13);
+          border-radius: 50%;
+          background-color: v.$sub-color01;
+          position: absolute;
+          top: 0;
+          left: 1px;
+          transform: translate(-50%, var(--indicator-offset, 0px));
+          transition: none;
+          will-change: transform;
+        }
+        &.indicator-ready::after {
+          transition: transform 0.22s ease;
         }
         li {
           @include c.flex(start, center);
           gap: v.pxtovw(20);
           font-weight: 500;
           line-height: 1;
-          // margin-bottom: v.pxtovw(11);
           margin-bottom: clamp(1rem, v.pxtovw(11), 1.5rem);
           &:last-of-type {
             margin-bottom: 0;
@@ -109,17 +130,6 @@
           &.active {
             position: relative;
             color: v.$sub-color01;
-            &::before {
-              content: "";
-              width: v.pxtovw(13);
-              height: v.pxtovw(13);
-              border-radius: 50%;
-              background-color: v.$sub-color01;
-              position: absolute;
-              top: 50%;
-              left: calc(v.pxtovw(-25) - (v.pxtovw(13) / 2));
-              transform: translateY(-50%);
-            }
           }
         }
       }

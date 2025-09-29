@@ -236,6 +236,19 @@ component
     border-bottom-right-radius: v.pxtovw(10);
   }
 }
+.item02 {
+  border: 1px solid v.$sub-color01;
+  border-radius: v.pxtovw(10);
+  overflow: hidden;
+  .ttl {
+    text-align: center;
+    color: #fff;
+    padding: v.pxtovw(10) 0;
+    // border-top-left-radius: v.pxtovw(10);
+    // border-top-right-radius: v.pxtovw(10);
+    background-color: v.$sub-color01;
+  }
+}
 
 .block_image-txt {
   @include c.flex(center, center);

@@ -215,7 +215,7 @@ input[type="button"] {
   // }
   @include mq() {
     width: auto;
-    max-width: v.pxtovw_sp(630);
+    max-width: v.pxtovw_sp(670);
   }
 }
 
@@ -238,6 +238,10 @@ a {
   letter-spacing: 0.08em;
   font-weight: 400;
   color: v.$txt-color;
+  @include mq() {
+    @include p-font(v.pxtovw_sp(28));
+    letter-spacing: 0.02em;
+  }
 }
 div {
   line-height: 1;

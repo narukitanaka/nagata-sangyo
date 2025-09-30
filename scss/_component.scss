@@ -13,11 +13,17 @@ component
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    @include c.mq() {
+      @include c.p-font(v.pxtovw_sp(25));
+    }
   }
   h2 {
     font-family: "Zen Old Mincho", serif;
     font-size: v.pxtovw(40);
     font-weight: 500;
+    @include c.mq() {
+      font-size: v.pxtovw_sp(54);
+    }
   }
 }
 
@@ -90,6 +96,12 @@ component
   padding: 0 v.pxtovw(36) 0 v.pxtovw(64);
   box-shadow: inset 0 0 v.pxtovw(15) rgba(62, 176, 249, 0.5);
   transition: all 0.3s;
+  @include c.mq() {
+    font-size: v.pxtovw_sp(28);
+    aspect-ratio: 1/0.27;
+    padding: 0 v.pxtovw_sp(83) 0 v.pxtovw_sp(134);
+    box-shadow: inset 0 0 v.pxtovw_sp(15) rgba(62, 176, 249, 0.5);
+  }
   &::before {
     content: "";
     position: absolute;
@@ -101,6 +113,11 @@ component
     border-radius: 50%;
     background-color: v.$sub-color01;
     transition: all 0.3s;
+    @include c.mq() {
+      left: v.pxtovw_sp(50);
+      width: v.pxtovw_sp(16);
+      box-shadow: inset 0 0 v.pxtovw_sp(15) rgba(62, 176, 249, 0.5);
+    }
   }
   &::after {
     content: "";
@@ -219,16 +236,25 @@ component
 //パンくず
 .breadcrumbs {
   padding-top: v.pxtovw(30);
+  @include c.mq() {
+    padding-top: v.pxtovw_sp(30);
+  }
   .inner {
     max-width: v.pxtovw(1286);
   }
   ul {
     @include c.flex(end, center);
     gap: v.pxtovw(32);
+    @include c.mq() {
+      gap: v.pxtovw_sp(40);
+    }
     li,
     a {
       @include c.p-font(v.pxtovw(14));
       font-weight: 500;
+      @include c.mq() {
+        font-size: v.pxtovw_sp(16);
+      }
     }
     li {
       &:has(> a) {
@@ -243,6 +269,10 @@ component
           right: v.pxtovw(-20);
           background: url(../images/common/icon-arrow01.svg) no-repeat
             center/contain;
+          @include c.mq() {
+            width: v.pxtovw_sp(5);
+            right: v.pxtovw_sp(-24);
+          }
         }
       }
       &:last-of-type {
@@ -266,13 +296,35 @@ component
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     @include c.p-font(v.pxtovw(12));
     color: v.$sub-color01;
+    @include c.mq() {
+      gap: v.pxtovw_sp(8);
+      font-size: v.pxtovw_sp(20);
+      width: v.pxtovw_sp(102);
+      height: v.pxtovw_sp(102);
+      border-radius: v.pxtovw_sp(10);
+      top: 17%;
+    }
     &::after {
       display: none;
     }
+    svg {
+      @include c.mq() {
+        width: v.pxtovw_sp(20);
+        height: v.pxtovw_sp(20);
+      }
+    }
   }
   .swiper-button-prev {
+    @include c.mq() {
+      left: v.pxtovw_sp(-15);
+    }
     svg {
       rotate: 180deg;
+    }
+  }
+  .swiper-button-next {
+    @include c.mq() {
+      right: v.pxtovw_sp(-15);
     }
   }
 }

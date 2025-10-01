@@ -80,6 +80,18 @@ component
     }
   }
 }
+.ttl-wrap03 {
+  > h2,
+  h3 {
+    font-family: "Zen Old Mincho", serif;
+    font-size: v.pxtovw(28);
+    font-weight: 500;
+    padding: v.pxtovw(13) 0 v.pxtovw(14);
+    text-align: center;
+    border-top: 1px solid #cecece;
+    border-bottom: 1px solid #cecece;
+  }
+}
 
 //ボタン
 .btn01 {
@@ -128,7 +140,8 @@ component
     width: v.pxtovw(20);
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: #fff;
+    background: url(../images/common/icon_arrow-nakamado.svg) no-repeat
+      center/contain;
     transition: all 0.3s;
   }
   &:hover {
@@ -181,7 +194,8 @@ component
     width: v.pxtovw(15);
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: #fff;
+    background: url(../images/common/icon_arrow-nakamado.svg) no-repeat
+      center/contain;
     transition: all 0.3s;
   }
   &:hover {
@@ -387,5 +401,8 @@ component
       border-radius: v.pxtovw(14);
       overflow: hidden;
     }
+  }
+  &.reverse {
+    flex-direction: row-reverse;
   }
 }

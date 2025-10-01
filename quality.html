@@ -12,7 +12,7 @@
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/css/yakuhanjp.css">
-  <link rel="stylesheet" type="text/css" href="/scss/style.css">
+  <link rel="stylesheet" type="text/css" href="scss/style.css">
 
 
   <!-- GoogleFonts -->
@@ -35,9 +35,11 @@
   <header>
     <div class="header-inner">
       <div class="logo img-box">
-        <a href="./">
-          <img class="is_top" src="images/common/logo.svg" alt="長田産業株式会社｜NAGATA GROUP">
-        </a>
+        <h1>
+          <a href="./">
+            <img class="is_top" src="images/common/logo.svg" alt="長田産業株式会社｜NAGATA GROUP">
+          </a>
+        </h1>
       </div>
 
       <div class="navigation">
@@ -47,34 +49,35 @@
             <li><a href="about.html">私たちについて</a></li>
             <li class="parent">
               <a href="products.html">製品紹介</a>
+              <span class="plus"></span>
               <div class="mega-menu">
                 <ul>
                   <li>
-                    <a href="#">
+                    <a href="https://ldhtestnagata.tech/" target="_blank">
                       <div class="img-box"><img src="images/common/products-navi_img01.jpg" alt=""></div>
                       <p>LDH</p>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="https://mugibase.studio.site/">
                       <div class="img-box"><img src="images/common/products-navi_img02.jpg" alt=""></div>
                       <p>MUGIBASE</p>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="product-denpun.html">
                       <div class="img-box"><img src="images/common/products-navi_img03.jpg" alt=""></div>
                       <p>小麦でん粉</p>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="product-tanpaku.html">
                       <div class="img-box"><img src="images/common/products-navi_img04.jpg" alt=""></div>
                       <p>小麦たん⽩</p>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="product-improve.html">
                       <div class="img-box"><img src="images/common/products-navi_img05.jpg" alt=""></div>
                       <p>⾷品改良剤</p>
                     </a>
@@ -85,14 +88,24 @@
             </li>
             <li><a href="machining.html">受託加工</a></li>
             <li><a href="archive.html">お知らせ</a></li>
-            <li><a href="company.html">企業情報</a></li>
+            <li class="parent">
+              <a href="company.html">企業情報</a>
+              <span class="plus"></span>
+            </li>
           </ul>
         </nav>
 
         <div class="btn-area">
-          <a class=" header-btn orange" href="#">採用情報</a>
+          <a class=" header-btn orange" href="https://nagatagroup-recruit.org/">採用情報</a>
           <a class=" header-btn blue" href="contact.html">お問い合わせ</a>
         </div>
+      </div>
+
+      <div class="sp-menu">
+        <button>
+          <img src="images/common/icon_sp-menu.svg" alt="">
+          <p class="en">menu</p>
+        </button>
       </div>
     </div>
   </header>
@@ -102,25 +115,51 @@
       <div class="nav-wrap">
         <nav>
           <ul>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a href="./">ホーム</a></li>
+            <li><a href="about.html">私たちについて</a></li>
+            <li class="parent">
+              <a href="products.html">製品紹介</a>
+              <ul class="child">
+                <li><a href="product-denpun.html">- ⼩⻨でん粉</a></li>
+                <li><a href="product-tanpaku.html">- ⼩⻨たん白</a></li>
+                <li><a href="product-improve.html">- 食品改良剤</a></li>
+              </ul>
+              <div class="plus"><span></span></div>
+            </li>
+            <li><a href="machining.html">受託加工</a></li>
+            <li><a href="archive.html">お知らせ</a></li>
+            <li class="parent">
+              <a href="company.html">
+                企業情報
+              </a>
+              <ul class="child">
+                <li><a href="quality.html">- 環境・品質への取り組み</a></li>
+                <li><a href="group.html">- グループ会社</a></li>
+              </ul>
+              <div class="plus"><span></span></div>
+            </li>
           </ul>
         </nav>
       </div><!-- /.nav-wrap -->
 
+      <div class="btn-area">
+        <a class=" header-btn orange" href="https://nagatagroup-recruit.org/">採用情報</a>
+        <a class=" header-btn blue" href="contact.html">お問い合わせ</a>
+      </div>
+
     </div><!-- /.drawer-menu_inner -->
+    <div class="nagata en">NAGATA GROUP</div>
+    <div class="bg-dradient"></div>
   </div><!-- /.drawer-menu -->
 
   <main>
 
     <div class="p-under_kvbg">
-      <div class="under_kv">
+      <div class="under_kv p-quality">
         <div class="img-box obj-fit">
           <picture>
-            <source srcset="images/machining/fv_under-machining_pc.png" media="(max-width: 750px)">
-            <img src="images/machining/fv_under-machining_pc.png" alt="">
+            <source srcset="images/quality/fv_under-quality_sp.jpg" media="(max-width: 750px)">
+            <img src="images/quality/fv_under-quality_pc.png" alt="">
           </picture>
           <p class="en vertical">ENVIROMENT<br>AND<br>QUALITY</p>
         </div>
@@ -143,18 +182,18 @@
         <div class="inner">
 
           <h2>はじめに</h2>
-          <p>
-            テキスト
-          </p>
-
-          <div class="imeges">
-            <div class="img-box"><img src="images/#" alt=""></div>
-            <div class="img-box"><img src="images/#" alt=""></div>
-            <div class="img-box"><img src="images/#" alt=""></div>
-            <div class="img-box"><img src="images/#" alt=""></div>
+          <div class="first-txt">
+            <p>
+              安心・安全な食品をご提供できるよう、社員一丸となって取り組んでいます。<br>
+              また厳選した原材料を調達し、より良い商品を安定供給できるよう努めています。
+            </p>
+            <div class="img-box"><img src="images/quality/quality_intro-img01.jpg" alt=""></div>
+            <div class="img-box"><img src="images/quality/quality_intro-img02.jpg" alt=""></div>
+            <div class="img-box"><img src="images/quality/quality_intro-img03.jpg" alt=""></div>
+            <div class="img-box"><img src="images/quality/quality_intro-img04.jpg" alt=""></div>
           </div>
 
-          <div class="ashirai img-box"><img src="images/#" alt=""></div>
+          <div class="ashirai img-box"><img src="images/common/logo-mark01_white.svg" alt=""></div>
         </div>
       </section>
     </div>
@@ -165,111 +204,118 @@
           <h2>品質方針</h2>
         </div>
         <ul>
-          <li><span class="num en">01</span>テキストテキストテキストテキスト</li>
-          <li><span class="num en">02</span>テキストテキストテキストテキスト</li>
-          <li><span class="num en">02</span>テキストテキストテキストテキスト</li>
+          <li><span class="num en">01</span>お客様の心からの満足を得ることができ、お客様のニーズに適合する製品を提供します。</li>
+          <li><span class="num en">02</span>ＱＭＳ（品質マネジメントシステム）を着実に実行し、有効性の継続的な改善を図ります。</li>
+          <li><span class="num en">03</span>経営資源を有効に活用し、生産性の向上を実現します。</li>
         </ul>
         <div class="item02">
           <div class="ttl">ISO9001認証取得</div>
-          <div class="txt">テキストテキストテキストテキストテキストテキスト</div>
+          <div class="txt">長田産業は、ISO9001：2015の認証を取得しています。</div>
         </div>
       </div>
     </section>
 
     <section class="quality_quality">
-      <div class="inner">
-        <div class="block">
-          <div class="left">
-            <div class="ttl-wrap02">
-              <div class="inner-block">
+
+      <div class="bg-wrap">
+        <div class="inner wrap01">
+          <div class="block">
+            <div class="left">
+              <div class="inline-wrap">
                 <h2>
-                  テキストテキストテキストテキスト
-                  テキストテキスト
+                  高品質を保ち、<br class="u-sp">地域環境を守る<br>
+                  製造管理システム
                 </h2>
               </div>
+              <p>
+                よりよい製品を供給するために、原材料の受入検査、製造工程内での工程内検査、製造後の最終検査を通して、製品の安心・安全を確認します。<br>
+                工場の衛生状態も定期的な検査を実施し、製造ラインの安全性をチェックしています。<br>
+                またインプラントQCを毎日実施することで、工場内の状況を品質保証の目で厳しくチェックしています。<br>
+                排水処理過程でバイオガスを取り出し、ガス発電や製造工程内でのエネルギーとして利用しています。<br>
+                加えて、小麦でん粉製造工程から発生する小麦繊維は家畜の飼料として再利用しています。
+              </p>
             </div>
-            <p>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-              テキストテキストテキストテキストテキストテキスト
-            </p>
+            <div class="right">
+              <div class="img-box"><img src="images/quality/quality_system-img01.jpg" alt=""></div>
+            </div>
           </div>
-          <div class="right">
-            <div class="img-box"><img src="images/#" alt=""></div>
-          </div>
-        </div>
 
-        <div class="figures">
-          <div class="box item02">
-            <h3 class="ttl">テキストテキストテキスト</h3>
+          <div class="figures">
+            <div class="box item02">
+              <h3 class="ttl">「環境適合型スタイル」への取組み（廃棄物の軽量化と再資源化）</h3>
+              <div>
+                <div class="img-box"><img src="images/quality/quality_system-img02.jpg" alt=""></div>
+              </div>
+            </div>
             <div>
-              <div class="img-box"><img src="images/#" alt=""></div>
-            </div>
-          </div>
-          <div>
-            <div class="box item02">
-              <h3 class="ttl">テキストテキストテキスト</h3>
-              <div>
-                <div class="img-box"><img src="images/#" alt=""></div>
+              <div class="box item02">
+                <h3 class="ttl">廃棄物の再資源化</h3>
+                <div>
+                  <div class="img-box"><img src="images/quality/quality_system-img03.jpg" alt=""></div>
+                </div>
               </div>
+              <p>
+                工場内で発生する小麦繊維は、そのままでは産業廃棄物となりますが、小麦繊維を養牛、養豚用の飼料として活用してもらっており、廃棄物の再資源化に努めています。
+              </p>
             </div>
-            <p>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-            </p>
-          </div>
-          <div>
-            <div class="box item02">
-              <h3 class="ttl">テキストテキストテキスト</h3>
-              <div>
-                <div class="img-box"><img src="images/#" alt=""></div>
+            <div>
+              <div class="box item02">
+                <h3 class="ttl">メタンガス回収システム</h3>
+                <div>
+                  <div class="img-box"><img src="images/quality/quality_system-img04.jpg" alt=""></div>
+                </div>
               </div>
+              <p>
+                でん粉廃液からメタン発酵（嫌気性処理）にて、メタンガスを回収するシステムを日本で初めて確立し、排水処理の飛躍的な効率化を実現しました。また、発生するメタンガスはバイオマス発電、工場内製造に必要なエネルギーとして活用しています。
+              </p>
             </div>
-            <p>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-            </p>
           </div>
-        </div>
 
-        <div class="message">
-          <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-          <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-        </div>
-
-        <div class="eco-model">
-          <div class="left">
-            <div class="img-box"><img src="images/#" alt=""></div>
+          <div class="message">
+            <p>「長田産業」は、地域に溶け込んだ企業となるべく、</p>
+            <p>自然を大切にする環境適合型企業を目指しております。</p>
           </div>
-          <div class="right">
-            <h3>ひょうごバイオマスecoモデル登録</h3>
-            <p>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-            </p>
-          </div>
-        </div>
 
+        </div>
+        <div class="ashirai txt en">QUALITY</div>
       </div>
-      <div class="ashirai txt">QUALITY</div>
+
+      <div class="eco-model">
+        <div class="left">
+          <div class="img-box"><img src="images/quality/quality_system-img05.jpg" alt=""></div>
+        </div>
+        <div class="right">
+          <h3>ひょうごバイオマスecoモデル登録</h3>
+          <p>
+            小麦でん粉廃液を主体とした有機性排水のメタン発酵によるエネルギー利用への取り組みが「ひょうごバイオマスecoモデル」として登録されました。バイオマスとは生物由来の再生可能な有機性資源のことです。
+          </p>
+        </div>
+      </div>
     </section>
 
     <section class="quality_sistems">
-      <div class="block">
+      <div class="block wrap02">
         <div class="left">
-          <div class="img-box"><img src="images/#" alt=""></div>
+          <div class="img-box"><img src="images/quality/quality_system-img06.jpg" alt=""></div>
         </div>
         <div class="right">
           <div class="ttl-wrap">
-            <div class="sub-ttl en">HYGIEN MNAGEMENT SYSTEM</div>
+            <div class="sub-ttl en">HYGIENE MNAGEMENT SYSTEM</div>
             <h2>衛生管理システム</h2>
           </div>
           <p>
-            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            工場内に入場するまでに厳しい管理を実施しています。<br>
+            鏡の前で全身の身だしなみをチェックし、全身に粘着ローラーを掛け、更にエアーシャワーを通り、工場内へ入場します。<br>
+            また十分な手洗い、健康チェックを行い、従事者の衛生管理を行っています。
           </p>
         </div>
-        <div class="ashirai txt vertical">HYGIEN<br>MNAGEMENT<br>SYSTEM</div>
+        <div class="ashirai txt vertical en">HYGIENE<br>MNAGEMENT<br>SYSTEM</div>
       </div>
       <div class="inner">
-        <div class="block">
-          <h3>トレーサビリティシステム</h3>
+        <div class="block wrap03">
+          <div class="ttl-wrap03">
+            <h3>トレーサビリティシステム</h3>
+          </div>
 
           <div class="block_image-txt point">
             <div class="left">
@@ -278,25 +324,27 @@
                 <h3>一貫した生産体制</h3>
               </div>
               <p class="txt">
-                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                原材料・包装資材などの受入検査や外観の目視検査を実施しています。<br>
+                重要な原材料に関しては、科学的な検査も実施し、安全を確認してから商品に使用しています。
               </p>
             </div>
             <div class="right">
-              <div class="img-box"><img src="images/#" alt=""></div>
+              <div class="img-box"><img src="images/quality/quality_system-img07.jpg" alt=""></div>
             </div>
           </div>
-          <div class="block_image-txt reserved point">
+          <div class="block_image-txt reverse point">
             <div class="left">
               <div class="ttl">
                 <div class="en">Point 02</div>
                 <h3>工程内検査</h3>
               </div>
               <p class="txt">
-                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                原材料の品質検査はもちろんのこと、各プロセスを記録・管理し、工程の維持に努めています。<br>
+                また各工程には最新機器を導入するなど、万全を期して安全な食品づくりに取り組んでいます。
               </p>
             </div>
             <div class="right">
-              <div class="img-box"><img src="images/#" alt=""></div>
+              <div class="img-box"><img src="images/quality/quality_system-img08.jpg" alt=""></div>
             </div>
           </div>
           <div class="block_image-txt point">
@@ -306,31 +354,32 @@
                 <h3>最終検査</h3>
               </div>
               <p class="txt">
-                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                商品からサンプルを抜き取り、理化学検査や微生物検査を行っています。<br>
+                また、でん粉の粘度測定や小麦たん白の強度測定など、各商品の特性に合わせた様々な分析を行い、安心・安全・安定した商品を提供できるよう日々努めています。
               </p>
             </div>
             <div class="right">
-              <div class="img-box"><img src="images/#" alt=""></div>
+              <div class="img-box"><img src="images/quality/quality_system-img09.jpg" alt=""></div>
             </div>
           </div>
         </div>
 
-        <div class="block">
-          <h3>在庫管理システム</h3>
+        <div class="block wrap04">
+          <div class="ttl-wrap03">
+            <h3>在庫管理システム</h3>
+          </div>
           <p>
-            テキストテキストテキストテキストテキスト<br>
-            テキストテキストテキストテキストテキスト
+            各種商品は専用倉庫へ移動し、出荷するまでの間、適切に保管されます。<br>
+            また在庫管理システムにより、先入先出管理を行っています。
           </p>
           <div class="view-area">
             <div class="item02">
               <div class="ttl">御名倉庫 外観</div>
-              <div class="img-box"><img src="images/#" alt=""></div>
+              <div class="img-box"><img src="images/quality/quality_system-img10.jpg" alt=""></div>
             </div>
-          </div>
-          <div class="view-area">
             <div class="item02">
               <div class="ttl">御名倉庫 内観</div>
-              <div class="img-box"><img src="images/#" alt=""></div>
+              <div class="img-box"><img src="images/quality/quality_system-img11.jpg" alt=""></div>
             </div>
           </div>
         </div>

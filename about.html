@@ -12,7 +12,7 @@
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/css/yakuhanjp.css">
-  <link rel="stylesheet" type="text/css" href="/scss/style.css">
+  <link rel="stylesheet" type="text/css" href="scss/style.css">
 
 
   <!-- GoogleFonts -->
@@ -35,9 +35,11 @@
   <header>
     <div class="header-inner">
       <div class="logo img-box">
-        <a href="./">
-          <img class="is_top" src="images/common/logo.svg" alt="長田産業株式会社｜NAGATA GROUP">
-        </a>
+        <h1>
+          <a href="./">
+            <img class="is_top" src="images/common/logo.svg" alt="長田産業株式会社｜NAGATA GROUP">
+          </a>
+        </h1>
       </div>
 
       <div class="navigation">
@@ -51,31 +53,31 @@
               <div class="mega-menu">
                 <ul>
                   <li>
-                    <a href="#">
+                    <a href="https://ldhtestnagata.tech/" target="_blank">
                       <div class="img-box"><img src="images/common/products-navi_img01.jpg" alt=""></div>
                       <p>LDH</p>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="https://mugibase.studio.site/">
                       <div class="img-box"><img src="images/common/products-navi_img02.jpg" alt=""></div>
                       <p>MUGIBASE</p>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="product-denpun.html">
                       <div class="img-box"><img src="images/common/products-navi_img03.jpg" alt=""></div>
                       <p>小麦でん粉</p>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="product-tanpaku.html">
                       <div class="img-box"><img src="images/common/products-navi_img04.jpg" alt=""></div>
                       <p>小麦たん⽩</p>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="product-improve.html">
                       <div class="img-box"><img src="images/common/products-navi_img05.jpg" alt=""></div>
                       <p>⾷品改良剤</p>
                     </a>
@@ -98,6 +100,13 @@
           <a class=" header-btn blue" href="contact.html">お問い合わせ</a>
         </div>
       </div>
+
+      <div class="sp-menu">
+        <button>
+          <img src="images/common/icon_sp-menu.svg" alt="">
+          <p class="en">menu</p>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -106,15 +115,41 @@
       <div class="nav-wrap">
         <nav>
           <ul>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a href="./">ホーム</a></li>
+            <li><a href="about.html">私たちについて</a></li>
+            <li class="parent">
+              <a href="products.html">製品紹介</a>
+              <ul class="child">
+                <li><a href="product-denpun.html">- ⼩⻨でん粉</a></li>
+                <li><a href="product-tanpaku.html">- ⼩⻨たん白</a></li>
+                <li><a href="product-improve.html">- 食品改良剤</a></li>
+              </ul>
+              <div class="plus"><span></span></div>
+            </li>
+            <li><a href="machining.html">受託加工</a></li>
+            <li><a href="archive.html">お知らせ</a></li>
+            <li class="parent">
+              <a href="company.html">
+                企業情報
+              </a>
+              <ul class="child">
+                <li><a href="quality.html">- 環境・品質への取り組み</a></li>
+                <li><a href="group.html">- グループ会社</a></li>
+              </ul>
+              <div class="plus"><span></span></div>
+            </li>
           </ul>
         </nav>
       </div><!-- /.nav-wrap -->
 
+      <div class="btn-area">
+        <a class=" header-btn orange" href="https://nagatagroup-recruit.org/">採用情報</a>
+        <a class=" header-btn blue" href="contact.html">お問い合わせ</a>
+      </div>
+
     </div><!-- /.drawer-menu_inner -->
+    <div class="nagata en">NAGATA GROUP</div>
+    <div class="bg-dradient"></div>
   </div><!-- /.drawer-menu -->
 
   <main>
@@ -145,12 +180,12 @@
 
       <section class="about_about-us">
         <div class="inner">
-          <div class="ttl-wrap">
+          <div class="ttl-wrap fadeIn">
             <div class="sub-ttl en">ABOUT US</div>
             <h2>小麦とともに、<br>社会の基盤を支える。</h2>
           </div>
 
-          <div class="about-swiper_wrap">
+          <div class="about-swiper_wrap fadeIn">
             <div class="about-swiper swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -217,7 +252,7 @@
 
     <section class="about_message">
       <div class="inner">
-        <div class="ttl-wrap">
+        <div class="ttl-wrap fadeIn">
           <div class="sub-ttl en">MESSAGE</div>
           <div class="inline-wrap">
             <h2>ご挨拶</h2>
@@ -227,7 +262,7 @@
             <p class="en-helv u-pc">Towards the untapped potential of wheat.</p>
           </div>
         </div>
-        <div class="txt">
+        <div class="txt fadeIn">
           <p>
             当社は、1953年、私の祖父である長田孝に依り長田澱粉製造所として創設されました。<br>
             以来小麦でん粉・小麦たん白の製造を柱に、70年以上という月日を宍粟市で積み重ねて参りました。<br>
@@ -253,13 +288,14 @@
     <section class="about_philosophy">
       <div class="block">
         <div class="left">
-          <div class="ttl-wrap">
+          <div class="ttl-wrap fadeIn">
             <div class="sub-ttl en">PHILOSOPHY</div>
             <h2>経営理念</h2>
           </div>
-          <div class="img-box"><img src="images/about/about_philosophy-img01.jpg" alt=""></div>
+          <div class="img-box parallax y100 pc-para-none"><img src="images/about/about_philosophy-img01.jpg" alt="">
+          </div>
         </div>
-        <div class="right">
+        <div class="right fadeIn">
           <dl>
             <dt>
               <span class="en">Mission</span>
@@ -299,7 +335,7 @@
           <p class="en">OUR PHILOSOPHY OUR PHILOSOPHY</p>
         </div>
       </div>
-      <div class="images">
+      <div class="images parallax y100">
         <div class="img-box"><img src="images/about/about_philosophy-img03.jpg" alt=""></div>
         <div class="img-box"><img src="images/about/about_philosophy-img02.jpg" alt=""></div>
       </div>
@@ -307,7 +343,7 @@
 
     <section class="about_research">
       <div class="inner">
-        <div class="block">
+        <div class="block fadeIn">
           <div class="left">
             <div class="img-box"><img src="images/about/about_research-img01.jpg" alt=""></div>
           </div>
@@ -319,7 +355,7 @@
             <p>長田産業では、70年以上にわたり培ってきた経験と知見を活かし、小麦でん粉・小麦たん白の新たな価値創造に取り組んでいます。</p>
           </div>
         </div>
-        <div class="research-block">
+        <div class="research-block fadeIn">
           <div class="box">
             <div class="img-box">
               <img src="images/about/about_research-img02.jpg" alt="">

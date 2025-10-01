@@ -12,7 +12,7 @@
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/css/yakuhanjp.css">
-  <link rel="stylesheet" type="text/css" href="/scss/style.css">
+  <link rel="stylesheet" type="text/css" href="scss/style.css">
 
 
   <!-- GoogleFonts -->
@@ -53,31 +53,31 @@
               <div class="mega-menu">
                 <ul>
                   <li>
-                    <a href="#">
+                    <a href="https://ldhtestnagata.tech/" target="_blank">
                       <div class="img-box"><img src="images/common/products-navi_img01.jpg" alt=""></div>
                       <p>LDH</p>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="https://mugibase.studio.site/">
                       <div class="img-box"><img src="images/common/products-navi_img02.jpg" alt=""></div>
                       <p>MUGIBASE</p>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="product-denpun.html">
                       <div class="img-box"><img src="images/common/products-navi_img03.jpg" alt=""></div>
                       <p>小麦でん粉</p>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="product-tanpaku.html">
                       <div class="img-box"><img src="images/common/products-navi_img04.jpg" alt=""></div>
                       <p>小麦たん⽩</p>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="product-improve.html">
                       <div class="img-box"><img src="images/common/products-navi_img05.jpg" alt=""></div>
                       <p>⾷品改良剤</p>
                     </a>
@@ -100,6 +100,13 @@
           <a class=" header-btn blue" href="contact.html">お問い合わせ</a>
         </div>
       </div>
+
+      <div class="sp-menu">
+        <button>
+          <img src="images/common/icon_sp-menu.svg" alt="">
+          <p class="en">menu</p>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -108,20 +115,47 @@
       <div class="nav-wrap">
         <nav>
           <ul>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a href="./">ホーム</a></li>
+            <li><a href="about.html">私たちについて</a></li>
+            <li class="parent">
+              <a href="products.html">製品紹介</a>
+              <ul class="child">
+                <li><a href="product-denpun.html">- ⼩⻨でん粉</a></li>
+                <li><a href="product-tanpaku.html">- ⼩⻨たん白</a></li>
+                <li><a href="product-improve.html">- 食品改良剤</a></li>
+              </ul>
+              <div class="plus"><span></span></div>
+            </li>
+            <li><a href="machining.html">受託加工</a></li>
+            <li><a href="archive.html">お知らせ</a></li>
+            <li class="parent">
+              <a href="company.html">
+                企業情報
+              </a>
+              <ul class="child">
+                <li><a href="quality.html">- 環境・品質への取り組み</a></li>
+                <li><a href="group.html">- グループ会社</a></li>
+              </ul>
+              <div class="plus"><span></span></div>
+            </li>
           </ul>
         </nav>
       </div><!-- /.nav-wrap -->
 
+      <div class="btn-area">
+        <a class=" header-btn orange" href="https://nagatagroup-recruit.org/">採用情報</a>
+        <a class=" header-btn blue" href="contact.html">お問い合わせ</a>
+      </div>
+
     </div><!-- /.drawer-menu_inner -->
+    <div class="nagata en">NAGATA GROUP</div>
+    <div class="bg-dradient"></div>
   </div><!-- /.drawer-menu -->
 
   <main>
 
     <div class="hidden">
+
       <div class="fv">
         <div class="fv_text fv-point">
           <div class="main-copy fvanime01">
@@ -182,7 +216,7 @@
         <div class="bg-blur img-box"><img src="images/top/fv-bg_blur.png" alt=""></div>
 
 
-        <div class="fv-images fvanime06">
+        <div class="fv-images fvanime06 parallax y-200">
           <div class="img-box"><img src="images/top/top_fv-img02.jpg" alt=""></div>
           <div class="img-box"><img src="images/top/top_fv-img03.jpg" alt=""></div>
         </div>
@@ -198,7 +232,7 @@
       <section class="wrap_about">
         <div class="inner">
           <div class="block">
-            <div class="left">
+            <div class="left fadeIn">
               <div class="ttl-wrap">
                 <div class="en sub-ttl">ABOUT US</div>
                 <h2>私たちについて</h2>
@@ -213,15 +247,15 @@
                 <a class="btn01" href="about.html">私たちについて</a>
               </div>
             </div>
-            <div class="right">
-              <div class="copy-text">
+            <div class="right order-fadeIn">
+              <div class="copy-text fadeChild">
                 <div class="copy img-box"><img src="images/top/top_about-verticaltxt.svg" alt="小麦と共に、地域と共に。"></div>
                 <div class="en">
                   Together with wheat, together<br>
                   with the community
                 </div>
               </div>
-              <div class="img-box"><img src="images/top/top_about-img01.jpg" alt=""></div>
+              <div class="img-box fadeChild"><img src="images/top/top_about-img01.jpg" alt=""></div>
               <div class="circle-txt">
                 <div class="img-box"><img src="images/common/circle-text01.svg"
                     alt="Together with wheat, together with the community."></div>
@@ -240,14 +274,14 @@
 
     <section class="wrap_product">
       <div class="inner">
-        <div class="ttl-wrap">
+        <div class="ttl-wrap fadeIn">
           <div class="en sub-ttl">PRODUCT</div>
           <h2>製品紹介</h2>
         </div>
-        <p class="u-pc">長田産業の小麦を使ったさまざまな製品をご覧ください。</p>
-        <div class="link-area">
+        <p class="u-pc fadeIn">長田産業の小麦を使ったさまざまな製品をご覧ください。</p>
+        <div class="link-area fadeIn">
           <div class="banner">
-            <a href="#">
+            <a href="https://ldhtestnagata.tech/" target="_blank">
               <div class="img-box">
                 <picture>
                   <source srcset="images/top/top_product-banner01_sp.png" media="(max-width: 750px)">
@@ -258,7 +292,7 @@
             </a>
           </div>
           <div class="banner">
-            <a href="#">
+            <a href="https://mugibase.studio.site/" target="_blank">
               <div class="img-box">
                 <source srcset="images/top/top_product-banner02_sp.png" media="(max-width: 750px)">
                 <img src="images/top/top_product-banner02.png" alt="MUGIBASE">
@@ -291,7 +325,7 @@
     <section class="wrap_machining hidden">
       <div class="inner">
         <div class="block">
-          <div class="left">
+          <div class="left fadeIn">
             <div class="ttl-wrap">
               <div class="en sub-ttl">MACHINING</div>
               <h2>受託加工</h2>
@@ -304,12 +338,12 @@
             </div>
           </div>
           <div class="right">
-            <div class="img-box"><img src="images/top/top_machining-img01.jpg" alt=""></div>
-            <div class="img-box"><img src="images/top/top_machining-img02.jpg" alt=""></div>
-            <div class="img-box"><img src="images/top/top_machining-img03.jpg" alt=""></div>
+            <div class="img-box parallax y100"><img src="images/top/top_machining-img01.jpg" alt=""></div>
+            <div class="img-box parallax y100"><img src="images/top/top_machining-img02.jpg" alt=""></div>
+            <div class="img-box parallax y100"><img src="images/top/top_machining-img03.jpg" alt=""></div>
           </div>
         </div>
-        <div class="ashirai img-box"><img src="images/common/logo-mark02.svg" alt=""></div>
+        <div class="ashirai img-box parallax y-100"><img src="images/common/logo-mark02.svg" alt=""></div>
         <div class="ashirai txt">
           <p class="en">MACHINING</p>
         </div>
@@ -319,7 +353,7 @@
     <section class="wrap_news">
       <div class="inner">
         <div class="block">
-          <div class="left">
+          <div class="left fadeIn">
             <div class="ttl-wrap">
               <div class="en sub-ttl">NEWS</div>
               <h2>お知らせ</h2>
@@ -329,7 +363,7 @@
             </div>
           </div>
           <div class="right">
-            <div class="banner">
+            <div class="banner fadeIn">
               <a href="#">
                 <div class="img-box">
                   <picture>
@@ -339,7 +373,7 @@
                 </div>
               </a>
             </div>
-            <div class="archive-list">
+            <div class="archive-list fadeIn">
               <dl>
                 <a href="single.html">
                   <dt>
@@ -426,7 +460,7 @@
 
     <div class="banner-quality">
       <div class="inner">
-        <div class="img-box">
+        <div class="img-box fadeIn">
           <a href="#">
             <picture>
               <source srcset="images/top/top_quality-banner01_sp.png" media="(max-width: 750px)">

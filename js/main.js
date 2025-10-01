@@ -404,35 +404,54 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 ///////////////////////////////////////////
-//ハンバーガーメニュー
-//////////////////////////////////////////
-// $(".hambager").on("click", function () {
-//   navOpen();
-// });
-// let navFlg = false;
-// function navOpen() {
-//   if (!navFlg) {
-//     $(".hamberger-wrap").addClass("is-ham-open");
-//     $(".drawer-menu").addClass("is-drawermenu-open");
-//     $("header").addClass("is-drawermenu-header");
-//     navFlg = true;
-//   } else {
-//     $(".hamberger-wrap").removeClass("is-ham-open");
-//     $(".drawer-menu").removeClass("is-drawermenu-open");
-//     $("header").removeClass("is-drawermenu-header");
-//     navFlg = false;
-//   }
-// }
+//sp-menuボタン
+///////////////////////////////////////////
+$(function () {
+  const $drawerMenu = $(".drawer-menu");
+  const $spMenu = $(".sp-menu");
+  const $spMenuButton = $(".sp-menu button");
+  const $buttonText = $spMenuButton.find("p.en");
+  const $header = $("header");
+
+  $spMenuButton.on("click", function () {
+    const isOpen = $drawerMenu.hasClass("is-open");
+    if (isOpen) {
+      $drawerMenu.removeClass("is-open");
+      $spMenu.removeClass("is-open");
+      $header.removeClass("is-open");
+      $buttonText.text("menu");
+      $("body").css("overflow", "auto"); // スクロールを元に戻す
+    } else {
+      $drawerMenu.addClass("is-open");
+      $spMenu.addClass("is-open");
+      $header.addClass("is-open");
+      $buttonText.text("close");
+      $("body").css("overflow", "hidden"); // 背景のスクロールを無効化
+    }
+  });
+
+  // ドロワーメニュー内のリンクをクリックしたときにメニューを閉じる
+  $drawerMenu.find("a").on("click", function () {
+    if ($drawerMenu.hasClass("is-open")) {
+      $drawerMenu.removeClass("is-open");
+      $spMenu.removeClass("is-open");
+      $header.removeClass("is-open");
+      $buttonText.text("menu");
+      $("body").css("overflow", "auto"); // スクロールを元に戻す
+    }
+  });
+});
 
 ///////////////////////////////////////////
-//ドロワーメニュー インスタ アコーディオン
+//ドロワーメニュー アコーディオン
 ///////////////////////////////////////////
-$(".accordion-content").hide();
-$(".insta_accordion-trigger").on("click", function (e) {
-  e.preventDefault(); // a要素に変える場合の保険
+$(".drawer-menu .child").hide();
+$(".drawer-menu .parent .plus").on("click", function (e) {
+  e.preventDefault();
   const $btn = $(this);
-  const $panel = $btn.next(".accordion-content"); // 兄弟を取得
-  $btn.toggleClass("open");
+  const $parent = $btn.closest(".parent");
+  const $panel = $parent.find(".child");
+  $parent.toggleClass("accordion-open");
   $panel.stop(true, true).slideToggle("fast");
 });
 
@@ -486,22 +505,22 @@ if (orderFadeInSections.length > 0) {
 //////////////////////////////////////////////////////
 //scale0から１に拡大しながらにフェードイン
 //////////////////////////////////////////////////////
-const scaleFadeInElements = document.querySelectorAll(".scale-fadeIn");
-if (scaleFadeInElements.length > 0) {
-  scaleFadeInElements.forEach((element) => {
-    gsap.from(element, {
-      opacity: 0,
-      scale: 0,
-      duration: 0.8,
-      ease: "back.out(1.7)",
-      scrollTrigger: {
-        trigger: element,
-        start: "top 60%",
-        once: true,
-      },
-    });
-  });
-}
+// const scaleFadeInElements = document.querySelectorAll(".scale-fadeIn");
+// if (scaleFadeInElements.length > 0) {
+//   scaleFadeInElements.forEach((element) => {
+//     gsap.from(element, {
+//       opacity: 0,
+//       scale: 0,
+//       duration: 0.8,
+//       ease: "back.out(1.7)",
+//       scrollTrigger: {
+//         trigger: element,
+//         start: "top 60%",
+//         once: true,
+//       },
+//     });
+//   });
+// }
 
 //////////////////////////////////////////////////////
 //さりげないパララックス
@@ -521,6 +540,11 @@ if (parallaxElements.length > 0) {
       window.innerWidth <= 750 &&
       element.classList.contains("sp-para-none")
     ) {
+      return; // パララックス処理をスキップ
+    }
+
+    // PCかつ.pc-para-noneクラスがある場合はパララックス無効
+    if (window.innerWidth > 750 && element.classList.contains("pc-para-none")) {
       return; // パララックス処理をスキップ
     }
 
@@ -573,64 +597,73 @@ if (parallaxBgElements.length > 0) {
 //////////////////////////////////////////////////////
 //ファーストビューアニメーション
 //////////////////////////////////////////////////////
-// document.addEventListener("DOMContentLoaded", function () {
-//   if (typeof gsap === "undefined") {
-//     return;
-//   }
-//   const fv01 = document.querySelector(".fvanime01");
-//   if (!fv01) {
-//     return;
-//   }
-//   const fv02 = document.querySelector(".fvanime02");
-//   const fv03 = document.querySelector(".fvanime03");
-//   const fv04 = document.querySelector(".fvanime04");
-//   const fv05 = document.querySelector(".fvanime05");
-//   const fv06 = document.querySelector(".fvanime06");
-//   const fv07 = document.querySelector(".fvanime07");
-//   const header = document.querySelector("header");
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof gsap === "undefined") {
+    return;
+  }
+  const fv01 = document.querySelector(".fvanime01");
+  if (!fv01) {
+    return;
+  }
+  const fv02 = document.querySelector(".fvanime02");
+  const fv03 = document.querySelector(".fvanime03");
+  const fv04 = document.querySelector(".fvanime04");
+  const fv05 = document.querySelector(".fvanime05");
+  const fv06 = document.querySelector(".fvanime06");
+  const fv07 = document.querySelector(".fvanime07");
+  const header = document.querySelector("header");
 
-//   const fvAll = [fv01, fv02, fv03, fv04, fv05, fv06, fv07].filter(Boolean);
-//   gsap.set(fvAll, { opacity: 0, y: 30 });
-//   if (header) {
-//     header.classList.add("is-animating");
-//     gsap.set(header, { opacity: 0 });
-//   }
+  const fvAll = [fv01, fv02, fv03, fv04, fv05, fv06, fv07].filter(Boolean);
+  gsap.set(fvAll, { opacity: 0, y: 30 });
 
-//   const tl = gsap.timeline({ defaults: { duration: 0.8, ease: "power3.out" } });
+  // fv04とfv06は位置を変えずにフェードインのみ
+  if (fv04) {
+    gsap.set(fv04, { opacity: 0 });
+  }
+  if (fv06) {
+    gsap.set(fv06, { opacity: 0 });
+  }
 
-//   tl.to(fv01, { opacity: 1, y: 0 });
+  if (header) {
+    header.classList.add("is-animating");
+    gsap.set(header, { opacity: 0 });
+  }
 
-//   if (fv04) {
-//     tl.to(fv04, { opacity: 1, y: 0, duration: 0.5 }, "+=0.05");
-//   }
+  const tl = gsap.timeline({ defaults: { duration: 0.8, ease: "power3.out" } });
 
-//   if (fv06) {
-//     tl.to(fv06, { opacity: 1, y: 0, duration: 0.35 }, "+=0.02");
-//   }
+  tl.to(fv01, { opacity: 1, y: 0 });
 
-//   const groupThree = [fv02, fv03, fv05, fv07].filter(Boolean);
-//   if (groupThree.length) {
-//     tl.to(groupThree, { opacity: 1, y: 0 }, "+=0.1");
-//     if (header) {
-//       tl.fromTo(
-//         header,
-//         { opacity: 0, y: -20 },
-//         { opacity: 1, y: 0, clearProps: "transform,opacity" },
-//         "<"
-//       );
-//     }
-//   } else if (header) {
-//     tl.fromTo(
-//       header,
-//       { opacity: 0, y: -20 },
-//       { opacity: 1, y: 0, clearProps: "transform,opacity" },
-//       "+=0.1"
-//     );
-//   }
+  if (fv04) {
+    tl.to(fv04, { opacity: 1, duration: 1.2, ease: "sine.in" }, "+=0.1");
+  }
 
-//   if (header) {
-//     tl.call(function () {
-//       header.classList.remove("is-animating");
-//     });
-//   }
-// });
+  if (fv06) {
+    tl.to(fv06, { opacity: 1, duration: 0.6, ease: "sine.in" }, "-=0.6");
+  }
+
+  const groupThree = [fv02, fv03, fv05, fv07].filter(Boolean);
+  if (groupThree.length) {
+    tl.to(groupThree, { opacity: 1, y: 0 }, "+=0.1");
+    if (header) {
+      tl.fromTo(
+        header,
+        { opacity: 0, y: -20 },
+        { opacity: 1, y: 0, clearProps: "transform,opacity" },
+        "<"
+      );
+    }
+  } else if (header) {
+    tl.fromTo(
+      header,
+      { opacity: 0, y: -20 },
+      { opacity: 1, y: 0, clearProps: "transform,opacity" },
+      "+=0.1"
+    );
+  }
+
+  if (header) {
+    tl.call(function () {
+      header.classList.remove("is-animating");
+    });
+  }
+});

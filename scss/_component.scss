@@ -7,7 +7,8 @@ component
 .ttl-wrap {
   .sub-ttl {
     display: inline-block;
-    @include c.p-font(v.pxtovw(16));
+    // @include c.p-font(v.pxtovw(16));
+    font-size: clamp(1rem, v.pxtovw(16), 2.2rem);
     font-weight: 600;
     background: v.$gradient01;
     -webkit-background-clip: text;
@@ -92,6 +93,39 @@ component
     border-bottom: 1px solid #cecece;
   }
 }
+.ttl-wrap04 {
+  position: relative;
+  @include c.flex(start, center);
+  gap: v.pxtovw(9);
+  padding-bottom: v.pxtovw(20);
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+  }
+  &::before {
+    background-color: #cecece;
+    width: 100%;
+  }
+  &::after {
+    background-color: #458bb4;
+    width: 17%;
+  }
+  img {
+    width: v.pxtovw(12);
+    margin-top: v.pxtovw(5);
+  }
+  h2,
+  h3,
+  h4 {
+    font-family: "Zen Old Mincho", serif;
+    font-size: v.pxtovw(26);
+    font-weight: 500;
+  }
+}
 
 //ボタン
 .btn01 {
@@ -99,7 +133,8 @@ component
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: v.pxtovw(14);
+  // font-size: v.pxtovw(14);
+  @include c.p-font(v.pxtovw(14));
   font-weight: 600;
   color: v.$sub-color01;
   border-radius: 100vmax;
@@ -137,7 +172,7 @@ component
     top: 50%;
     transform: translateY(-50%) scale(0);
     right: v.pxtovw(25);
-    width: v.pxtovw(20);
+    width: clamp(1.2rem, v.pxtovw(20), 2.8rem);
     aspect-ratio: 1/1;
     border-radius: 50%;
     background: url(../images/common/icon_arrow-nakamado.svg) no-repeat
@@ -153,6 +188,91 @@ component
       rgba(27, 183, 235, 1) 0%,
       rgba(29, 88, 142, 1) 100%
     );
+    &::before {
+      transform: translateY(-50%) scale(0);
+    }
+    &::after {
+      transform: translateY(-50%) scale(1);
+    }
+  }
+  &.outlink {
+    position: relative;
+    aspect-ratio: 1/0.21;
+    padding: 0 v.pxtovw(61) 0 v.pxtovw(64);
+    background-color: #fff;
+    &::after {
+      display: none;
+    }
+    svg {
+      position: absolute;
+      right: v.pxtovw(39);
+      width: v.pxtovw(13);
+      transition: all 0.3s;
+      path {
+        transition: all 0.3s;
+      }
+    }
+    &:hover {
+      color: #fff;
+      padding: 0 v.pxtovw(80) 0 v.pxtovw(40);
+      box-shadow: none;
+      &::before {
+        transform: translateY(-50%) scale(0);
+      }
+      svg {
+        scale: 1.3;
+      }
+    }
+  }
+}
+
+.btn04 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: start;
+  font-size: v.pxtovw(14);
+  font-weight: 500;
+  color: #fff;
+  width: 100%;
+  aspect-ratio: 1/0.24;
+  padding-left: v.pxtovw(48);
+  background: linear-gradient(
+    270deg,
+    rgba(27, 183, 235, 1) 0%,
+    rgba(29, 88, 142, 1) 100%
+  );
+  transition: all 0.3s;
+  @include c.mq() {
+    font-size: v.pxtovw_sp(28);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: v.pxtovw(20);
+    width: v.pxtovw(8);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.3s;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    right: v.pxtovw(30);
+    width: v.pxtovw(20);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: url(../images/common/icon_arrow-nakamado.svg) no-repeat
+      center/contain;
+    transition: all 0.3s;
+  }
+  &:hover {
+    padding-left: v.pxtovw(30);
     &::before {
       transform: translateY(-50%) scale(0);
     }
@@ -232,6 +352,9 @@ component
   .slider-track {
     display: flex;
     animation: slide 20s linear infinite;
+    @include c.mq() {
+      animation: slide 15s linear infinite;
+    }
     p {
       flex-shrink: 0;
       margin-right: v.pxtovw(20);
@@ -267,7 +390,7 @@ component
       @include c.p-font(v.pxtovw(14));
       font-weight: 500;
       @include c.mq() {
-        font-size: v.pxtovw_sp(16);
+        @include c.p-font(v.pxtovw_sp(16));
       }
     }
     li {
@@ -316,7 +439,10 @@ component
       width: v.pxtovw_sp(102);
       height: v.pxtovw_sp(102);
       border-radius: v.pxtovw_sp(10);
-      top: 17%;
+      top: 18%;
+    }
+    @include c.mq(sm-s) {
+      top: 21%;
     }
     &::after {
       display: none;
@@ -404,5 +530,42 @@ component
   }
   &.reverse {
     flex-direction: row-reverse;
+  }
+}
+
+.block_table {
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    td,
+    th {
+      padding: 1.5rem;
+      text-align: center;
+      border: 1px solid #e5e5e5;
+    }
+    th {
+      font-weight: 600;
+      background-color: #f2f7fa;
+    }
+    td {
+      vertical-align: middle;
+    }
+    // .group-namatan {
+    //   tr {
+    //     &:first-of-type {
+    //       td {
+    //         &:first-child {
+    //           text-align: center;
+    //           color: #fff;
+    //           background-color: #43a3b4;
+    //         }
+    //       }
+    //     }
+    //   }
+    //   td {
+    //     background-color: #f3fafa;
+    //   }
+    // }
   }
 }

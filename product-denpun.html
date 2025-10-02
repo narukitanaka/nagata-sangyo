@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="images/fav.png" />
+  <!-- <meta name="robots" content="index, follow"> -->
+  <meta name="format-detection" content="telephone=no">
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/css/yakuhanjp.css">
+  <link rel="stylesheet" type="text/css" href="scss/style.css">
+
+
+  <!-- GoogleFonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300..700&family=Noto+Sans+JP:wght@100..900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet">
+
+  <title>長田産業株式会社｜NAGATA GROUP</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo img-box">
+        <h1>
+          <a href="./">
+            <img class="is_top" src="images/common/logo.svg" alt="長田産業株式会社｜NAGATA GROUP">
+          </a>
+        </h1>
+      </div>
+
+      <div class="navigation">
+        <nav>
+          <ul>
+            <li><a href="./">ホーム</a></li>
+            <li><a href="about.html">私たちについて</a></li>
+            <li class="parent">
+              <a href="products.html">製品紹介</a>
+              <span class="plus"></span>
+              <div class="mega-menu">
+                <ul>
+                  <li>
+                    <a href="https://ldhtestnagata.tech/" target="_blank">
+                      <div class="img-box"><img src="images/common/products-navi_img01.jpg" alt=""></div>
+                      <p>LDH</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://mugibase.studio.site/" target="_blank">
+                      <div class="img-box"><img src="images/common/products-navi_img02.jpg" alt=""></div>
+                      <p>MUGIBASE</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="product-denpun.html">
+                      <div class="img-box"><img src="images/common/products-navi_img03.jpg" alt=""></div>
+                      <p>小麦でん粉</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="product-tanpaku.html">
+                      <div class="img-box"><img src="images/common/products-navi_img04.jpg" alt=""></div>
+                      <p>小麦たん⽩</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="product-improve.html">
+                      <div class="img-box"><img src="images/common/products-navi_img05.jpg" alt=""></div>
+                      <p>⾷品改良剤</p>
+                    </a>
+                  </li>
+                  <li></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="machining.html">受託加工</a></li>
+            <li><a href="archive.html">お知らせ</a></li>
+            <li class="parent">
+              <a href="company.html">企業情報</a>
+              <span class="plus"></span>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="btn-area">
+          <a class="header-btn orange" href="https://nagatagroup-recruit.org/" target="_blank">採用情報</a>
+          <a class="header-btn blue" href="contact.html">お問い合わせ</a>
+        </div>
+      </div>
+
+      <div class="sp-menu">
+        <button>
+          <img src="images/common/icon_sp-menu.svg" alt="">
+          <p class="en">menu</p>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer-menu">
+    <div class="drawer-menu_inner">
+      <div class="nav-wrap">
+        <nav>
+          <ul>
+            <li><a href="./">ホーム</a></li>
+            <li><a href="about.html">私たちについて</a></li>
+            <li class="parent">
+              <a href="products.html">製品紹介</a>
+              <ul class="child">
+                <li><a href="product-denpun.html">- ⼩⻨でん粉</a></li>
+                <li><a href="product-tanpaku.html">- ⼩⻨たん白</a></li>
+                <li><a href="product-improve.html">- 食品改良剤</a></li>
+              </ul>
+              <div class="plus"><span></span></div>
+            </li>
+            <li><a href="machining.html">受託加工</a></li>
+            <li><a href="archive.html">お知らせ</a></li>
+            <li class="parent">
+              <a href="company.html">
+                企業情報
+              </a>
+              <ul class="child">
+                <li><a href="quality.html">- 環境・品質への取り組み</a></li>
+                <li><a href="group.html">- グループ会社</a></li>
+              </ul>
+              <div class="plus"><span></span></div>
+            </li>
+          </ul>
+        </nav>
+      </div><!-- /.nav-wrap -->
+
+      <div class="btn-area">
+        <a class=" header-btn orange" href="https://nagatagroup-recruit.org/">採用情報</a>
+        <a class=" header-btn blue" href="contact.html">お問い合わせ</a>
+      </div>
+
+    </div><!-- /.drawer-menu_inner -->
+    <div class="nagata en">NAGATA GROUP</div>
+    <div class="bg-dradient"></div>
+  </div><!-- /.drawer-menu -->
+
+  <main>
+
+    <div class="p-under_kvbg">
+      <div class="under_kv p-products">
+        <div class="img-box obj-fit">
+          <picture>
+            <source srcset="images/denpunn/fv_under-denpun_sp.jpg" media="(max-width: 750px)">
+            <img src="images/denpunn/fv_under-denpun_pc.png" alt="">
+          </picture>
+          <p class="en vertical">PRODUCT</p>
+        </div>
+        <div class="kv_ttl">
+          <h1>小麦でん粉</h1>
+          <p class="en">PRODUCT</p>
+        </div>
+      </div><!-- /.fv -->
+
+      <div class="breadcrumbs">
+        <div class="inner">
+          <ul>
+            <li><a href="./">トップ</a></li>
+            <li>小麦でん粉</li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="denpun_intro">
+        <div class="inner">
+          <div class="block">
+            <div class="left">
+              <div class="ttl-wrap">
+                <div class="sub-ttl en">PRODUCT</div>
+                <h2>小麦でん粉</h2>
+              </div>
+              <p>
+                でん粉は、植物の葉で光合成されたグルコースがたくさん結合したアミロースとアミロペクチンからなる天然の高分子です。小麦・トウモロコシ・イネといった穀物類では種子に、ジャガイモ・サツマイモ・キャッサバといったイモ類では根や地下茎に貯蔵されています。
+                その中でも小麦でん粉は他の穀類、イモ類と異なり平均粒子径15～40μmの大粒子と2～10μmの小粒子の区分からなります。でん粉に水を加え加熱すると膨潤し糊化します。小麦でん粉を糊化させると老化しにくく、離水も少ないので粘度安定性の高い糊液をつくることができます。
+              </p>
+            </div>
+            <div class="right">
+              <div class="img-box">
+                <picture>
+                  <source srcset="images/denpunn/denpun_img01_sp.jpg" media="(max-width: 768px)">
+                  <img src="images/denpunn/denpun_img01.jpg" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+
+          <div class="amylogram">
+            <div class="ttl-wrap03">
+              <h3>小麦でん粉のアミログラム（粘度曲線）</h3>
+            </div>
+            <div class="flex">
+              <div>
+                <h4>アミログラム</h4>
+                <div class="img-box"><img src="images/denpunn/denpun_img02.jpg" alt="アミログラム"></div>
+              </div>
+              <div>
+                <h4>離水の比較</h4>
+                <div class="img-box"><img src="images/denpunn/denpun_img03.jpg" alt="離水の比較"></div>
+              </div>
+            </div>
+            <p>
+              でん粉粒は水の中で加熱すると、吸水し膨潤します。さらに加熱を続けると、粒が崩壊し分散していきます。この一連の過程をでん粉の糊化現象と呼び、その粘度特性をわかりやすく表したものがアミログラムです。小麦でん粉は、数あるでん粉種の中でも膨潤しにくいでん粉に分類され、さらに加熱による粒の崩壊が起こりにくいとされています。その特性により、優れた粘度安定性を示すほか、再結晶化による離水が抑制されるため、ソフトな食感の維持が可能となります。
+            </p>
+          </div>
+
+        </div>
+        <div class="slider-container slider-txt_denpun">
+          <div class="slider-track">
+            <p class="en">OUR PRODUCTS OUR PRODUCT</p>
+            <p class="en">OUR PRODUCTS OUR PRODUCT</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+
+    <section class="denpun_lineup">
+      <div class="inner">
+        <div class="ttl-wrap">
+          <div class="sub-ttl en">LINE UP</div>
+          <h2>でんぷん商品ラインナップ</h2>
+        </div>
+
+        <div class="wrap01">
+          <div class="ttl-wrap03">
+            <h3>小麦でん粉<span>※長田産業㈱分析例</span></h3>
+          </div>
+
+          <div class="block_table product">
+            <table class="tbl">
+              <colgroup>
+                <col class="col01">
+                <col class="col02">
+                <col class="col03">
+                <col class="col04">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th style="border-right: 1px solid #fff;" scope="col">品名</th>
+                  <th style="border-right: 1px solid #fff;" scope="col">内容量</th>
+                  <th style="border-right: 1px solid #fff;" scope="col">荷姿</th>
+                  <th scope="col">表示・用途</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>宝船</td>
+                  <td>25kg・20kg</td>
+                  <td rowspan="6">クラフト紙</td>
+                  <td rowspan="6">利用用途からの<br>情報を抜粋<br>※内容共有いただく</td>
+                </tr>
+                <tr>
+                  <td>浮粉</td>
+                  <td>25kg・20kg</td>
+                </tr>
+                <tr>
+                  <td>丸食</td>
+                  <td>25kg・20kg</td>
+                </tr>
+                <tr>
+                  <td>特等</td>
+                  <td>25kg・20kg</td>
+                </tr>
+                <tr>
+                  <td>丸特</td>
+                  <td>25kg</td>
+                </tr>
+                <tr>
+                  <td>壱等</td>
+                  <td>25kg</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="ttl-wrap04">
+            <img src="images/common/icon_sp-menu.svg" alt="">
+            <h4>荷物姿写真</h4>
+          </div>
+
+          <div class="flex">
+            <div class="box item">
+              <div class="img-box"><img src="images/denpunn/denpun-nimotsu01.jpg" alt="宝船"></div>
+              <p class="ttl">宝船</p>
+            </div>
+            <div class="box item">
+              <div class="img-box"><img src="images/denpunn/denpun-nimotsu02.jpg" alt="浮粉"></div>
+              <p class="ttl">浮粉</p>
+            </div>
+            <div class="box item">
+              <div class="img-box"><img src="images/denpunn/denpun-nimotsu03.jpg" alt="丸食"></div>
+              <p class="ttl">丸食</p>
+            </div>
+            <div class="box item">
+              <div class="img-box"><img src="images/denpunn/denpun-nimotsu04.jpg" alt="特等"></div>
+              <p class="ttl">特等</p>
+            </div>
+            <div class="box item">
+              <div class="img-box"><img src="images/denpunn/denpun-nimotsu05.jpg" alt="丸特"></div>
+              <p class="ttl">丸特</p>
+            </div>
+            <div class="box item">
+              <div class="img-box"><img src="images/denpunn/denpun-nimotsu06.jpg" alt="壱等"></div>
+              <p class="ttl">壱等</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrap02">
+          <div class="ttl-wrap03">
+            <h3>α（アルファー）化小麦でん粉<span>※長田産業㈱分析例</span></h3>
+          </div>
+          <p>
+            でん粉は通常、冷水では溶解せず、乳液状に分散懸濁しているだけで、しばらく放置すれば沈殿し、粘性もなくなります。<br>
+            このようなでん粉の状態をβ（ベーター）でん粉と呼びます。<br>
+            Βでん粉の水懸濁液を加熱したり、アルカリ性にしたり、塩類を加えたりすると、でん粉粒子は膨潤を始め、粒子が崩壊し、粘性を持った透明または半透明のでん粉糊液になります。<br>
+            このような糊液の状態をα化と呼びます。α化小麦でん粉とは、小麦でん粉をα化（糊化）し、瞬時に乾燥・粉砕・分級したもので、水に速やかに溶解し、粘ちょう性の高い糊液となります。<br>
+            小麦でん粉は元来、粘度の経時変化が小さく、老化の遅い、極めて安定な粘性を有しており、α化させることにより、この特性がさらに顕著になります。
+          </p>
+
+          <div class="block_table product">
+            <table class="tbl">
+              <colgroup>
+                <col class="col01">
+                <col class="col02">
+                <col class="col03">
+                <col class="col04">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th style="border-right: 1px solid #fff;" scope="col">品名</th>
+                  <th style="border-right: 1px solid #fff;" scope="col">内容量</th>
+                  <th style="border-right: 1px solid #fff;" scope="col">荷姿</th>
+                  <th scope="col">表示・用途</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>NPアルファーK</td>
+                  <td rowspan="3">20kg</td>
+                  <td rowspan="3">クラフト紙</td>
+                  <td style="text-align: left;" rowspan="2">製菓・製パン用途における 食感改良目的の他、 トロミ付け、水分調整、粘度調整等に適しています。</td>
+                </tr>
+                <tr>
+                  <td>NPアルファーRM</td>
+                </tr>
+                <tr>
+                  <td>アルファーC2</td>
+                  <td style="text-align: left;">耐老化性に優れ、 食感の経時変化を抑制します。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="ttl-wrap04">
+            <img src="images/common/icon_sp-menu.svg" alt="">
+            <h4>荷物姿写真</h4>
+          </div>
+
+          <div class="flex">
+            <div class="box item">
+              <div class="img-box"><img src="images/denpunn/denpun-nimotsu07.jpg" alt="NPアルファーK"></div>
+              <p class="ttl">NPアルファーK</p>
+            </div>
+            <div class="box item">
+              <div class="img-box"><img src="images/denpunn/denpun-nimotsu08.jpg" alt="NPアルファーRM"></div>
+              <p class="ttl">NPアルファーRM</p>
+            </div>
+            <div class="box item">
+              <div class="img-box"><img src="images/denpunn/denpun-nimotsu09.jpg" alt="アルファーC2"></div>
+              <p class="ttl">アルファーC2</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="wrap03">
+          <div class="ttl-wrap03">
+            <h3>物理加工小麦でん粉<span>※長田産業㈱分析例</span></h3>
+          </div>
+          <p>
+            小麦でん粉に物理的な特殊加工を施し、吸水性を高めたものが物理加工小麦でん粉です。加水量を増やせるため、採れる量（歩留まり）向上・食感改良につながります。
+          </p>
+
+          <div class="block_table product">
+            <table class="tbl">
+              <colgroup>
+                <col class="col01">
+                <col class="col02">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th style="border-right: 1px solid #fff;" scope="col">品名</th>
+                  <th scope="col">特徴</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>GU-8</td>
+                  <td style="text-align: left;">
+                    パン、 畜産加工品・水産練り製品 ・ 厚焼き玉子、 バッター等に適しています。<br>
+                    水溶きによる沈降は遅く再懸濁も容易です。
+                  </td>
+                </tr>
+                <tr>
+                  <td>GU-8HT</td>
+                  <td style="text-align: left;">透明餃子用の特製ミックス粉です。 ラード等と混ぜるだけで透明餃子の皮が簡単にできます。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="ttl-wrap04">
+            <img src="images/common/icon_sp-menu.svg" alt="">
+            <h4>荷物姿写真</h4>
+          </div>
+
+          <div class="flex">
+            <div class="box item">
+              <div class="img-box"><img src="images/denpunn/denpun-nimotsu10.jpg" alt="GU-8"></div>
+              <p class="ttl">GU-8</p>
+            </div>
+            <div class="box item">
+              <div class="img-box"><img src="images/denpunn/denpun-nimotsu11.jpg" alt="GU-8HT"></div>
+              <p class="ttl">GU-8HT</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="banner">
+          <div class="img-box">
+            <a href="contact.html"><img src="images/common/common-under_download.png" alt="資料ダウンロードはこちら"></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <div class="cta">
+      <div class="block">
+        <div class="left">
+          <a href="company.html">
+            <p>企業情報</p>
+            <span class="en">COMPANY</span>
+            <div class="line"></div>
+          </a>
+        </div>
+        <div class="right">
+          <a href="contact.html">
+            <p>お問い合わせ<span class="u-pc">・</span><br class="u-sp">資料請求</p>
+            <span class="en">CONTACT</span>
+            <div class="line"></div>
+          </a>
+        </div>
+      </div>
+      <div class="slider-container slider-txt_cta">
+        <div class="slider-track">
+          <p class="en">TOWARDS THE UNTAPPED POTENTIAL OF WHEAT</p>
+          <p class="en">TOWARDS THE UNTAPPED POTENTIAL OF WHEAT</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="back-to">
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12.756" height="15.096" viewBox="0 0 12.756 15.096">
+          <g id="グループ_410592" data-name="グループ 410592" transform="translate(-30.563 -29.452)">
+            <path id="パス_44828" data-name="パス 44828" d="M-9695.2,840.308l5.672,5.671-5.672,5.671"
+              transform="translate(-809.038 -9658.665) rotate(-90)" fill="none" stroke="#49abe0" stroke-width="2" />
+            <line id="線_2023" data-name="線 2023" y1="13" transform="translate(36.941 31.548)" fill="none"
+              stroke="#49abe0" stroke-width="2" />
+          </g>
+        </svg>
+      </a>
+    </div>
+    <div class="inner">
+      <div class="footer-columns">
+        <div class="col01">
+          <div class="logo img-box"><a href="./"><img src="images/common/logo.svg" alt="長田産業株式会社"></a></div>
+          <div class="txt">
+            <p>〒671-2544 <br class="u-sp">兵庫県宍粟市山崎町千本屋215</p>
+            <a href="policy.html">プライバシーポリシー</a>
+          </div>
+          <div class="copyright"><small class="en">Copyright © NAGATA GROUP HOLDINGS, LTD. All rights reserved.</small>
+          </div>
+        </div>
+        <div class="col02">
+          <nav>
+            <ul>
+              <li><a href="./">ホーム</a></li>
+              <li><a href="about.html">私たちについて</a></li>
+              <li>
+                <a href="products.html">
+                  製品紹介
+                </a>
+                <ul>
+                  <li><a href="https://ldhtestnagata.tech/" target="_blank">LDH</a></li>
+                  <li><a href="https://mugibase.studio.site/" target="_blank">MUGIBASE</a></li>
+                  <li><a href="product-denpun.html">小麦でん粉</a></li>
+                  <li><a href="product-tanpaku.html">小麦たん⽩</a></li>
+                  <li><a href="product-improve.html">⾷品改良剤</a></li>
+                </ul>
+              </li>
+              <li><a href="machining.html">受託加工</a></li>
+              <li><a href="archive.html">お知らせ</a></li>
+              <li>
+                <a href="company.html">
+                  企業情報
+                </a>
+                <ul class="parent02">
+                  <li><a href="quality.html">環境・品質への取り組み</a></li>
+                  <li><a href="group.html">グループ会社</a></li>
+                </ul>
+              </li>
+              <li><a href="https://nagatagroup-recruit.org/" target="_blank">採用情報</a></li>
+              <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>

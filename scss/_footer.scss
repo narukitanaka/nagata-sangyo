@@ -63,6 +63,9 @@ footer {
   }
   .inner {
     max-width: v.pxtovw(1250);
+    @include c.mq(md-s) {
+      max-width: v.pxtovw(1350);
+    }
     @include c.mq() {
       max-width: v.pxtovw_sp(676);
     }
@@ -70,6 +73,9 @@ footer {
   .footer-columns {
     @include c.flex(between, start);
     gap: v.pxtovw(66);
+    @include c.mq(pc-s) {
+      gap: v.pxtovw(50);
+    }
     @include c.mq() {
       flex-direction: column;
       gap: 0;
@@ -96,7 +102,7 @@ footer {
         }
         p,
         a {
-          @include c.p-font(v.pxtovw(15));
+          font-size: v.pxtovw(15);
           @include c.mq() {
             font-size: v.pxtovw_sp(32);
           }
@@ -144,6 +150,12 @@ footer {
     .col02 {
       width: v.pxtovw(670);
       flex-shrink: 0;
+      @include c.mq(pc-s) {
+        width: v.pxtovw(720);
+      }
+      @include c.mq(md-s) {
+        width: v.pxtovw(780);
+      }
       @include c.mq() {
         width: 100%;
         margin-bottom: v.pxtovw_sp(93);
@@ -155,11 +167,15 @@ footer {
             border-bottom: 1px solid #bfbfbf;
             @include c.flex(start, center);
             gap: v.pxtovw(50);
+            @include c.mq(md-s) {
+              gap: v.pxtovw(30);
+            }
             @include c.mq() {
               @include c.flex(between, start);
             }
             > a {
               position: relative;
+              font-size: clamp(1.1rem, v.pxtovw(16), 2.2rem);
               font-weight: 500;
               padding: v.pxtovw(20) 0 v.pxtovw(24) v.pxtovw(45);
               transition: all 0.3s;
@@ -190,6 +206,9 @@ footer {
             ul {
               display: flex;
               gap: v.pxtovw(20);
+              @include c.mq(md-s) {
+                gap: v.pxtovw(15);
+              }
               @include c.mq() {
                 flex-wrap: wrap;
                 column-gap: v.pxtovw_sp(28);
@@ -211,7 +230,7 @@ footer {
                 a {
                   position: relative;
                   color: #919191;
-                  @include c.p-font(v.pxtovw(14));
+                  font-size: clamp(1rem, v.pxtovw(14), 2rem);
                   font-weight: 500;
                   padding-left: v.pxtovw(12);
                   @include c.mq() {

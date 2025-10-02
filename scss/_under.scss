@@ -91,6 +91,16 @@
       }
     }
   }
+  &.p-group {
+    .kv_ttl {
+      padding-right: v.pxtovw(43);
+    }
+    .img-box {
+      p {
+        font-size: v.pxtovw(80);
+      }
+    }
+  }
 }
 
 /*************************************************
@@ -1532,36 +1542,6 @@
           }
         }
       }
-      .btn-wrap {
-        .btn01 {
-          position: relative;
-          aspect-ratio: 1/0.21;
-          padding: 0 v.pxtovw(61) 0 v.pxtovw(64);
-          &::after {
-            display: none;
-          }
-          svg {
-            position: absolute;
-            right: v.pxtovw(39);
-            width: v.pxtovw(13);
-            transition: all 0.3s;
-            path {
-              transition: all 0.3s;
-            }
-          }
-          &:hover {
-            color: #fff;
-            padding: 0 v.pxtovw(80) 0 v.pxtovw(40);
-            box-shadow: none;
-            &::before {
-              transform: translateY(-50%) scale(0);
-            }
-            svg {
-              scale: 1.2;
-            }
-          }
-        }
-      }
       .ashirai {
         position: absolute;
         &.illust {
@@ -1720,5 +1700,353 @@
         }
       }
     }
+  }
+}
+
+.products_pearl {
+  padding: v.pxtovw(87) 0 v.pxtovw(70);
+  background: v.$gradient04;
+  .ttl-wrap03 {
+    margin-bottom: v.pxtovw(34);
+  }
+  .items-pearl {
+    display: flex;
+    gap: v.pxtovw(30);
+    .box {
+      position: relative;
+      width: calc(100% / 4 - (v.pxtovw(90) / 4));
+      border-radius: v.pxtovw(10);
+      overflow: hidden;
+      background-color: #fff;
+      h3 {
+        padding-top: v.pxtovw(20);
+        font-weight: 600;
+        text-align: center;
+      }
+      p {
+        @include c.p-font(v.pxtovw(14));
+        padding: v.pxtovw(14) v.pxtovw(18) v.pxtovw(80);
+      }
+      .btn-wrap {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+/*************************************************
+小麦でん粉
+*************************************************/
+.denpun_intro {
+  position: relative;
+  padding: v.pxtovw(83) 0 v.pxtovw(121);
+  .inner {
+    position: relative;
+    z-index: 1;
+  }
+  .block {
+    gap: v.pxtovw(58);
+    margin-bottom: v.pxtovw(98);
+    .left {
+      width: v.pxtovw(493);
+      flex-shrink: 0;
+      .ttl-wrap {
+        margin-bottom: v.pxtovw(30);
+        .sub-ttl {
+          margin-bottom: v.pxtovw(15);
+        }
+      }
+      p {
+        line-height: 2.25;
+      }
+    }
+    .right {
+      flex-grow: 1;
+      .img-box {
+        border-radius: v.pxtovw(14);
+        overflow: hidden;
+      }
+    }
+  }
+  .amylogram {
+    .ttl-wrap03 {
+      margin-bottom: v.pxtovw(27);
+    }
+    .flex {
+      display: flex;
+      gap: v.pxtovw(45);
+      margin-bottom: v.pxtovw(50);
+      > div {
+        h4 {
+          position: relative;
+          font-family: "Zen Old Mincho", serif;
+          font-size: v.pxtovw(20);
+          font-weight: 500;
+          padding-left: v.pxtovw(11);
+          margin-bottom: v.pxtovw(12);
+          &::before {
+            content: "";
+            position: absolute;
+            top: 10%;
+            left: 0;
+            width: v.pxtovw(3);
+            height: 85%;
+            background: v.$sub-color01;
+          }
+        }
+      }
+    }
+    p {
+      line-height: 2.25;
+    }
+  }
+  .slider-txt_denpun {
+    position: absolute;
+    top: v.pxtovw(447);
+    left: 0;
+    p {
+      font-size: v.pxtovw(143);
+      line-height: 1.2;
+      color: v.$sub-color08;
+    }
+  }
+}
+
+.denpun_lineup {
+  padding: v.pxtovw(74) 0 v.pxtovw(101);
+  .ttl-wrap {
+    text-align: center;
+    margin-bottom: v.pxtovw(37);
+    .sub-ttl {
+      margin-bottom: v.pxtovw(7);
+    }
+  }
+  .inner {
+    > div {
+      .ttl-wrap03 {
+        margin-bottom: v.pxtovw(20);
+        h3 {
+          @include c.flex(center, center);
+          gap: v.pxtovw(12);
+          span {
+            display: inline-block;
+            @include c.p-font(v.pxtovw(14));
+            font-weight: 400;
+            padding-top: v.pxtovw(5);
+          }
+        }
+      }
+      > p {
+        line-height: 2.25;
+        margin-bottom: v.pxtovw(30);
+      }
+      .block_table {
+        margin-bottom: v.pxtovw(40);
+      }
+      .ttl-wrap04 {
+        margin-bottom: v.pxtovw(23);
+      }
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: v.pxtovw(35);
+        row-gap: v.pxtovw(30);
+        margin-bottom: v.pxtovw(71);
+        .box {
+          width: calc(100% / 3 - (v.pxtovw(70) / 3));
+          border-radius: v.pxtovw(10);
+          overflow: hidden;
+          .ttl {
+            font-size: v.pxtovw(18);
+            font-weight: 500;
+            background-color: v.$sub-color05;
+          }
+        }
+      }
+
+      &.wrap01 {
+        .block_table {
+          table {
+            .col01 {
+              width: 18%;
+            }
+            .col02 {
+              width: 20%;
+            }
+            .col03 {
+              width: 18%;
+            }
+            .col04 {
+              width: 44%;
+            }
+          }
+        }
+      }
+      &.wrap02 {
+        .block_table {
+          table {
+            .col01 {
+              width: 22%;
+            }
+            .col02 {
+              width: 16%;
+            }
+            .col03 {
+              width: 18%;
+            }
+            .col04 {
+              width: 44%;
+            }
+          }
+        }
+      }
+      &.wrap03 {
+        .block_table {
+          table {
+            .col01 {
+              width: 22%;
+            }
+            .col02 {
+              width: 78%;
+            }
+          }
+        }
+      }
+    }
+    .banner {
+      margin-top: v.pxtovw(100);
+    }
+  }
+}
+
+/*************************************************
+グループ会社
+*************************************************/
+.group_figure {
+  position: relative;
+  padding: v.pxtovw(52) 0 v.pxtovw(113);
+  .ttl-wrap03 {
+    margin-bottom: v.pxtovw(27);
+  }
+  .img-box {
+    width: v.pxtovw(1140);
+    margin: 0 auto;
+  }
+  .slider-txt_group {
+    position: absolute;
+    bottom: v.pxtovw(-40);
+    left: 0;
+    p {
+      font-size: v.pxtovw(143);
+      line-height: 1.2;
+      color: v.$sub-color03;
+    }
+  }
+}
+.group_companies {
+  padding: v.pxtovw(70) 0 v.pxtovw(74);
+  .block_image-txt {
+    align-items: self-start;
+    gap: v.pxtovw(60);
+    .left {
+      .ttl {
+        margin-bottom: v.pxtovw(14);
+      }
+      .tag {
+        display: flex;
+        gap: v.pxtovw(5);
+        margin-bottom: v.pxtovw(16);
+        span {
+          @include c.p-font(v.pxtovw(14));
+          font-weight: 500;
+          color: v.$sub-color05;
+          border: 1px solid v.$sub-color05;
+          padding: 3px v.pxtovw(9);
+        }
+      }
+      .txt {
+        margin-bottom: v.pxtovw(30);
+      }
+      .addrress {
+        border: 1px solid v.$sub-color09;
+        background-color: #fafafa;
+        padding: v.pxtovw(10) v.pxtovw(28);
+        dl {
+          display: flex;
+          padding: v.pxtovw(10) 0 v.pxtovw(10);
+          &:first-of-type {
+            border-bottom: 1px solid #cecece;
+          }
+          dt,
+          dd {
+            font-family: "Zen Old Mincho", serif;
+          }
+          dt {
+            display: flex;
+            align-items: baseline;
+            gap: v.pxtovw(7);
+            width: 33%;
+            img {
+              width: v.pxtovw(12);
+            }
+          }
+          dd {
+            width: 67%;
+          }
+        }
+      }
+      .btn-wrap {
+        margin-top: v.pxtovw(30);
+        .btn01 {
+          svg {
+            path {
+              fill: v.$sub-color01;
+            }
+          }
+          &:hover {
+            svg {
+              path {
+                fill: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+    .right {
+      position: relative;
+      .img-box {
+        position: relative;
+        z-index: 1;
+      }
+      .ashirai {
+        position: absolute;
+        bottom: v.pxtovw(-140);
+        right: v.pxtovw(-80);
+        z-index: 0;
+        &.txt {
+          font-size: v.pxtovw(213);
+          color: v.$sub-color03;
+        }
+      }
+    }
+  }
+  &.company02,
+  &.company04 {
+    background: v.$gradient04;
+    .block_image-txt {
+      .right {
+        .ashirai {
+          &.txt {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  &.company04 {
+    padding-bottom: v.pxtovw(131);
   }
 }

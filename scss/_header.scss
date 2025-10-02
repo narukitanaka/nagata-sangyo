@@ -250,9 +250,9 @@ header {
             position: relative;
             border-bottom: 1px solid #fff;
             padding: v.pxtovw_sp(21) 0 v.pxtovw_sp(22);
-            padding-left: v.pxtovw_sp(34);
             @include c.mq() {
               padding: v.pxtovw_sp(41) 0 v.pxtovw_sp(42);
+              padding-left: v.pxtovw_sp(34);
             }
             &::before {
               position: absolute;
@@ -297,19 +297,23 @@ header {
         }
         .parent {
           .plus {
+            @include c.flex(center, center);
             position: absolute;
-            top: v.pxtovw_sp(36);
-            right: v.pxtovw_sp(32);
-            width: clamp(1.2rem, v.pxtovw_sp(17), 1.7rem);
+            width: clamp(4rem, v.pxtovw_sp(50), 5rem);
             aspect-ratio: 1/1;
             @include c.mq() {
-              top: v.pxtovw_sp(60);
+              top: v.pxtovw_sp(42);
+              right: v.pxtovw_sp(17);
+            }
+            @include c.mq(sm-s) {
+              top: v.pxtovw_sp(27);
+              right: v.pxtovw_sp(0);
             }
             span {
               position: relative;
               display: block;
-              width: 100%;
-              height: 100%;
+              width: clamp(1.2rem, v.pxtovw_sp(18), 1.8rem);
+              aspect-ratio: 1/1;
               &::before {
                 content: "";
                 width: 100%;

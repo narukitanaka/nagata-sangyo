@@ -159,13 +159,13 @@ document.addEventListener("DOMContentLoaded", function () {
       service: "Service 02",
       title: "食品の委受託加工",
       description:
-        "お客様のニーズに合わせた食品の委受託加工サービスを提供しています。",
+        "ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト",
     },
     {
       service: "Service 03",
       title: "新規事業",
       description:
-        "小麦の新たな可能性を追求し、革新的な事業展開を進めています。",
+        "ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト",
     },
   ];
 
@@ -501,26 +501,6 @@ if (orderFadeInSections.length > 0) {
     }
   });
 }
-
-//////////////////////////////////////////////////////
-//scale0から１に拡大しながらにフェードイン
-//////////////////////////////////////////////////////
-// const scaleFadeInElements = document.querySelectorAll(".scale-fadeIn");
-// if (scaleFadeInElements.length > 0) {
-//   scaleFadeInElements.forEach((element) => {
-//     gsap.from(element, {
-//       opacity: 0,
-//       scale: 0,
-//       duration: 0.8,
-//       ease: "back.out(1.7)",
-//       scrollTrigger: {
-//         trigger: element,
-//         start: "top 60%",
-//         once: true,
-//       },
-//     });
-//   });
-// }
 
 //////////////////////////////////////////////////////
 //さりげないパララックス

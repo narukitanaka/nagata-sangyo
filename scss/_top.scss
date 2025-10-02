@@ -26,7 +26,10 @@ top
       width: v.pxtovw_sp(665);
       margin-left: v.pxtovw_sp(40);
       // margin-bottom: v.pxtovw_sp(195);
-      margin-bottom: v.pxtovw_sp(365);
+      margin-bottom: v.pxtovw_sp(340);
+    }
+    @include c.mq(sm-s) {
+      margin-bottom: v.pxtovw_sp(470);
     }
     .main-copy {
       font-family: "Zen Old Mincho", serif;
@@ -81,7 +84,7 @@ top
       }
     }
     .txt {
-      @include c.p-font(v.pxtovw(12));
+      font-size: clamp(1rem, v.pxtovw(12), 1.6rem);
       line-height: 2.2;
       letter-spacing: 0.04em;
       @include c.mq() {
@@ -96,7 +99,10 @@ top
     right: 0;
     @include c.mq() {
       width: v.pxtovw_sp(326);
-      top: v.pxtovw_sp(127);
+      top: v.pxtovw_sp(100);
+    }
+    @include c.mq(sm-s) {
+      top: v.pxtovw(135);
     }
     .img-box {
       border-top-left-radius: v.pxtovw(14);
@@ -260,7 +266,7 @@ top
   padding-top: v.pxtovw(81);
   overflow: hidden;
   @include c.mq() {
-    padding-top: v.pxtovw_sp(159);
+    padding-top: v.pxtovw_sp(120);
   }
   .block {
     gap: v.pxtovw(87);
@@ -312,10 +318,10 @@ top
       .copy-text {
         @include c.flex(end, start);
         gap: v.pxtovw(24);
-        margin-bottom: v.pxtovw(94);
+        margin-bottom: v.pxtovw(50);
         @include c.mq() {
           gap: v.pxtovw_sp(34);
-          margin-bottom: v.pxtovw_sp(60);
+          margin-bottom: v.pxtovw_sp(30);
         }
         .en {
           writing-mode: vertical-rl;
@@ -326,9 +332,18 @@ top
           }
         }
         .copy {
-          width: v.pxtovw(141);
+          font-family: "Zen Old Mincho", serif;
+          font-size: v.pxtovw(60);
+          letter-spacing: 0.12em;
+          line-height: 1.4;
           @include c.mq() {
-            width: v.pxtovw_sp(164);
+            font-size: v.pxtovw_sp(70);
+          }
+          span {
+            background: v.$gradient02;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
           }
         }
       }
@@ -416,6 +431,7 @@ top
     row-gap: v.pxtovw(28);
     @include c.mq() {
       grid-template-columns: 1fr;
+      column-gap: 0;
       row-gap: v.pxtovw_sp(30);
     }
     .banner {
@@ -513,6 +529,9 @@ top
     .left {
       width: v.pxtovw(431);
       flex-shrink: 0;
+      @include c.mq(md-s) {
+        width: v.pxtovw(500);
+      }
       @include c.mq() {
         display: contents;
         width: 100%;
@@ -534,16 +553,23 @@ top
         display: inline;
         line-height: 2.25;
         @include c.mq() {
-          margin-bottom: v.pxtovw_sp(71);
+          // margin-bottom: v.pxtovw_sp(71);
+          margin-bottom: v.pxtovw_sp(51);
           order: 2;
+        }
+        @include c.mq(sm-s) {
+          margin-bottom: v.pxtovw_sp(30);
         }
       }
       .btn-wrap {
         margin-top: v.pxtovw(55);
         @include c.mq() {
           @include c.flex(center, center);
-          margin-top: v.pxtovw_sp(106);
+          margin-top: v.pxtovw_sp(140);
           order: 4;
+        }
+        @include c.mq(sm-s) {
+          margin-top: v.pxtovw_sp(220);
         }
       }
     }
@@ -589,7 +615,7 @@ top
           width: v.pxtovw(373);
           left: v.pxtovw(132);
           // bottom: v.pxtovw(-251);
-          bottom: v.pxtovw(-201);
+          bottom: v.pxtovw(-181);
           @include c.mq() {
             margin-left: v.pxtovw_sp(163);
             margin-top: v.pxtovw_sp(-72);
@@ -654,6 +680,9 @@ top
   .block {
     position: relative;
     gap: v.pxtovw(108);
+    @include c.mq(pc-s) {
+      gap: v.pxtovw(60);
+    }
     @include c.mq() {
       gap: 0;
       flex-direction: column;
@@ -687,6 +716,9 @@ top
     .right {
       width: v.pxtovw(641);
       flex-shrink: 0;
+      @include c.mq(md-s) {
+        width: v.pxtovw(580);
+      }
       @include c.mq() {
         width: 100%;
         order: 2;
@@ -802,6 +834,12 @@ top
                 width: v.pxtovw_sp(32);
                 transform: none;
               }
+              svg {
+                @include c.mq() {
+                  width: 4px;
+                  height: 8px;
+                }
+              }
             }
           }
         }
@@ -896,7 +934,7 @@ top
       &:hover {
         transition: all 0.3s;
         &::before {
-          opacity: 0.7;
+          opacity: 0.3;
         }
       }
       &::before {
@@ -943,6 +981,7 @@ top
           right: 1rem;
           display: inline-block;
           width: v.pxtovw(38);
+          // width: 3.8rem;
           aspect-ratio: 1/1;
           background-color: #fbfbfb;
           clip-path: polygon(
@@ -950,6 +989,8 @@ top
             v.pxtovw(38) v.pxtovw(38),
             v.pxtovw(38) 0
           );
+          opacity: 0.5;
+          // clip-path: polygon(0 3.8rem, 3.8rem 3.8rem, 3.8rem 0);
           opacity: 0.5;
           @include c.mq() {
             bottom: 1rem;
@@ -966,11 +1007,11 @@ top
         &::after {
           content: "";
           position: absolute;
-          bottom: 0.9rem;
+          bottom: 1rem;
           background-color: #fbfbfb;
           opacity: 0.5;
           @include c.mq() {
-            bottom: 1.2;
+            bottom: 1rem;
           }
         }
         &::before {
@@ -984,11 +1025,10 @@ top
         &::after {
           width: 1px;
           height: calc(100% - 3rem);
-          bottom: 0.9rem;
-          right: 0.9rem;
+          right: 1rem;
           @include c.mq() {
-            bottom: 1.2rem;
-            right: 1.2rem;
+            bottom: 1.1rem;
+            right: 1.3rem;
           }
         }
       }

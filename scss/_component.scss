@@ -30,34 +30,12 @@ component
 
 .ttl-wrap02 {
   .inline-wrap {
+    display: flex;
     position: relative;
     overflow: hidden;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
+    img {
+      padding-top: v.pxtovw(7);
       width: v.pxtovw(12);
-      height: v.pxtovw(12);
-      border-radius: 50%;
-      background: linear-gradient(
-        0deg,
-        rgba(29, 88, 142, 1) 0%,
-        rgba(27, 183, 235, 1) 100%
-      );
-      padding: v.pxtovw(2);
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: v.pxtovw(2);
-      width: v.pxtovw(8);
-      height: v.pxtovw(8);
-      border-radius: 50%;
-      background-color: #fff;
     }
     h2 {
       position: relative;
@@ -81,6 +59,7 @@ component
     }
   }
 }
+
 .ttl-wrap03 {
   > h2,
   h3 {
@@ -286,8 +265,10 @@ component
   position: relative;
   @include c.flex(center, center);
   width: v.pxtovw(148);
+  min-width: 12rem;
   aspect-ratio: 1/0.3;
-  @include c.p-font(v.pxtovw(12));
+  // @include c.p-font(v.pxtovw(12));
+  font-size: clamp(1.1rem, v.pxtovw(12), 1.2rem);
   font-weight: 700;
   color: #fff;
   border-radius: 100vmax;

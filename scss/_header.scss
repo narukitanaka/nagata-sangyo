@@ -116,6 +116,7 @@ header {
             }
           }
           > a {
+            font-size: clamp(1.1rem, v.pxtovw(16), 2.2rem);
             font-weight: 500;
           }
           &.parent {
@@ -146,6 +147,7 @@ header {
     left: 50%;
     transform: translateX(-50%);
     width: v.pxtovw(560);
+    min-width: 42rem;
     transition: all 0.3s;
     z-index: 1;
     ul {
@@ -249,10 +251,9 @@ header {
           > li {
             position: relative;
             border-bottom: 1px solid #fff;
-            padding: v.pxtovw_sp(21) 0 v.pxtovw_sp(22);
+            padding: v.pxtovw_sp(21) 0 v.pxtovw_sp(22) v.pxtovw_sp(34);
             @include c.mq() {
-              padding: v.pxtovw_sp(41) 0 v.pxtovw_sp(42);
-              padding-left: v.pxtovw_sp(34);
+              padding: v.pxtovw_sp(41) 0 v.pxtovw_sp(42) v.pxtovw_sp(34);
             }
             &::before {
               position: absolute;
@@ -301,6 +302,12 @@ header {
             position: absolute;
             width: clamp(4rem, v.pxtovw_sp(50), 5rem);
             aspect-ratio: 1/1;
+            top: v.pxtovw_sp(42);
+            right: v.pxtovw_sp(17);
+            @include c.mq(md-s) {
+              top: v.pxtovw_sp(18);
+              right: v.pxtovw_sp(12);
+            }
             @include c.mq() {
               top: v.pxtovw_sp(42);
               right: v.pxtovw_sp(17);

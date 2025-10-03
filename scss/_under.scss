@@ -9,6 +9,9 @@
 .under_kv {
   position: relative;
   padding-top: v.pxtovw(137);
+  @include c.mq(md-s) {
+    padding-top: v.pxtovw(190);
+  }
   @include c.mq() {
     padding-top: v.pxtovw_sp(137);
   }
@@ -98,6 +101,13 @@
     .img-box {
       p {
         font-size: v.pxtovw(80);
+      }
+    }
+  }
+  &.p-company {
+    .img-box {
+      p {
+        font-size: v.pxtovw(92);
       }
     }
   }
@@ -2048,5 +2058,294 @@
   }
   &.company04 {
     padding-bottom: v.pxtovw(131);
+  }
+}
+
+/*************************************************
+企業情報
+*************************************************/
+.company_ourstory {
+  position: relative;
+  width: v.pxtovw(1300);
+  padding: v.pxtovw(99) 0 v.pxtovw(71);
+  margin-left: auto;
+  .block {
+    position: relative;
+    gap: v.pxtovw(123);
+    z-index: 1;
+    .left {
+      width: v.pxtovw(623);
+      flex-shrink: 0;
+      .ttl-wrap {
+        margin-bottom: v.pxtovw(57);
+        @include c.mq() {
+          margin-bottom: v.pxtovw_sp(34);
+          order: 1;
+        }
+        .sub-ttl {
+          @include c.p-font(v.pxtovw(18));
+          margin-bottom: v.pxtovw(8);
+          @include c.mq() {
+            font-size: v.pxtovw_sp(24);
+            margin-bottom: v.pxtovw_sp(16);
+          }
+        }
+        .inline-wrap {
+          margin-bottom: v.pxtovw(28);
+          @include c.mq() {
+            margin-bottom: v.pxtovw_sp(35);
+          }
+          h2 {
+            position: relative;
+            display: inline-block;
+            font-size: v.pxtovw(21);
+            font-weight: 500;
+            padding-right: v.pxtovw(15);
+            @include c.mq() {
+              font-size: v.pxtovw_sp(32);
+              padding-right: v.pxtovw_sp(20);
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 100%;
+              transform: translateY(-50%);
+              width: v.pxtovw(282);
+              height: 1px;
+              background-color: #d6d6d6;
+              z-index: 0;
+              @include c.mq() {
+                width: v.pxtovw_sp(440);
+              }
+            }
+          }
+        }
+        .copy {
+          h3 {
+            font-family: "Zen Old Mincho", serif;
+            font-size: v.pxtovw(47);
+            font-weight: 500;
+            line-height: 1.4;
+            margin-bottom: v.pxtovw(16);
+            @include c.mq() {
+              font-size: v.pxtovw_sp(54);
+              margin-bottom: 0;
+            }
+          }
+          .en {
+            @include c.p-font(v.pxtovw(14));
+          }
+        }
+      }
+      p {
+        line-height: 2.25;
+      }
+    }
+    .right {
+      flex-grow: 1;
+      .img-box {
+        border-top-left-radius: v.pxtovw(16);
+        border-bottom-left-radius: v.pxtovw(16);
+        overflow: hidden;
+      }
+    }
+  }
+  .slider-txt_company {
+    position: absolute;
+    bottom: v.pxtovw(200);
+    left: 0;
+    p {
+      font-size: v.pxtovw(200);
+      line-height: 1.2;
+      color: v.$sub-color03;
+    }
+  }
+}
+
+.company_table {
+  position: relative;
+  padding: v.pxtovw(86) 0 v.pxtovw(65);
+  .ttl-wrap {
+    text-align: center;
+    margin-bottom: v.pxtovw(25);
+    .sub-ttl {
+      margin-bottom: v.pxtovw(7);
+    }
+  }
+  .block_table {
+    margin-bottom: v.pxtovw(70);
+    .tbl {
+      width: 100%;
+      table-layout: fixed;
+      .col-1 {
+        width: 20%;
+      }
+      .col-2 {
+        width: 20%;
+      }
+      .col-3 {
+        width: 60%;
+      }
+      tr {
+        &:not(:last-of-type) {
+          th {
+            border-bottom: 1px solid #fff;
+          }
+        }
+      }
+      th {
+        vertical-align: middle;
+      }
+      td {
+        text-align: left;
+        padding-left: v.pxtovw(20);
+        background-color: #fff;
+      }
+    }
+  }
+  .vertical {
+    position: absolute;
+    top: v.pxtovw(200);
+    right: v.pxtovw(50);
+    font-size: v.pxtovw(220);
+    color: v.$sub-color03;
+    z-index: -1;
+  }
+}
+
+.company_initiatives {
+  position: relative;
+  padding: v.pxtovw(96) 0 v.pxtovw(109);
+  margin-bottom: v.pxtovw(97);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: v.pxtovw(1332);
+    height: 100%;
+    background: v.$gradient04;
+    z-index: -1;
+  }
+  .ttl-wrap02 {
+    margin-bottom: v.pxtovw(45);
+  }
+  .block_image-txt {
+    gap: v.pxtovw(59);
+    margin-bottom: v.pxtovw(70);
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    .left {
+      flex-grow: 1;
+      .ttl {
+        margin-bottom: v.pxtovw(16);
+      }
+    }
+    .right {
+      width: v.pxtovw(440);
+      flex-shrink: 0;
+      .thumb-list {
+        @include c.flex(start, center);
+        gap: v.pxtovw(19);
+        margin-top: v.pxtovw(15);
+        .thumb-item {
+          width: calc(100% / 3 - (v.pxtovw(38) / 3));
+        }
+      }
+    }
+  }
+}
+
+.company_history {
+  position: relative;
+  padding: v.pxtovw(100) 0 v.pxtovw(132);
+  margin-bottom: v.pxtovw(104);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: v.pxtovw(1332);
+    height: 100%;
+    background: v.$gradient04;
+    z-index: -1;
+  }
+  .ttl-wrap02 {
+    margin-bottom: v.pxtovw(54);
+  }
+  .time-line {
+    dl {
+      display: flex;
+      margin-bottom: v.pxtovw(35);
+      &:last-of-type {
+        margin-bottom: 0;
+        dt {
+          &::before {
+            height: calc(100% + v.pxtovw(20));
+          }
+        }
+      }
+      dt {
+        position: relative;
+        width: v.pxtovw(107);
+        font-size: v.pxtovw(32);
+        font-weight: 600;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 0;
+          width: v.pxtovw(1);
+          height: calc(100% + v.pxtovw(50));
+          background-color: v.$sub-color01;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: v.pxtovw(-7);
+          transform: translateY(-50%);
+          width: v.pxtovw(16);
+          aspect-ratio: 1/1;
+          border-radius: 50%;
+          background-color: v.$sub-color01;
+        }
+      }
+      dd {
+        display: flex;
+        flex-direction: column;
+        @include c.p-font(v.pxtovw(18));
+        font-weight: 500;
+        padding-left: v.pxtovw(91);
+        span {
+          font-size: v.pxtovw(14);
+          color: v.$sub-color05;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: v.pxtovw(7);
+          @include c.p-font(v.pxtovw(18));
+          font-weight: 500;
+          span {
+            font-size: v.pxtovw(14);
+            color: v.$sub-color05;
+          }
+          &:not(:last-of-type) {
+            margin-bottom: v.pxtovw(14);
+          }
+        }
+      }
+    }
+  }
+  .vertical {
+    position: absolute;
+    top: v.pxtovw(60);
+    right: v.pxtovw(-10);
+    font-size: v.pxtovw(220);
+    color: #fff;
+    z-index: -1;
   }
 }

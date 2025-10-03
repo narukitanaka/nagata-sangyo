@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="images/fav.png" />
+  <!-- <meta name="robots" content="index, follow"> -->
+  <meta name="format-detection" content="telephone=no">
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.1/dist/css/yakuhanjp.css">
+  <link rel="stylesheet" type="text/css" href="scss/style.css">
+
+
+  <!-- GoogleFonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300..700&family=Noto+Sans+JP:wght@100..900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet">
+
+  <title>長田産業株式会社｜NAGATA GROUP</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo img-box">
+        <h1>
+          <a href="./">
+            <img class="is_top" src="images/common/logo.svg" alt="長田産業株式会社｜NAGATA GROUP">
+          </a>
+        </h1>
+      </div>
+
+      <div class="navigation">
+        <nav>
+          <ul>
+            <li><a href="./">ホーム</a></li>
+            <li><a href="about.html">私たちについて</a></li>
+            <li class="parent">
+              <a href="products.html">製品紹介</a>
+              <span class="plus"></span>
+              <div class="mega-menu">
+                <ul>
+                  <li>
+                    <a href="https://ldhtestnagata.tech/" target="_blank">
+                      <div class="img-box"><img src="images/common/products-navi_img01.jpg" alt=""></div>
+                      <p>LDH</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://mugibase.studio.site/" target="_blank">
+                      <div class="img-box"><img src="images/common/products-navi_img02.jpg" alt=""></div>
+                      <p>MUGIBASE</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="product-denpun.html">
+                      <div class="img-box"><img src="images/common/products-navi_img03.jpg" alt=""></div>
+                      <p>小麦でん粉</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="product-tanpaku.html">
+                      <div class="img-box"><img src="images/common/products-navi_img04.jpg" alt=""></div>
+                      <p>小麦たん⽩</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="product-improve.html">
+                      <div class="img-box"><img src="images/common/products-navi_img05.jpg" alt=""></div>
+                      <p>⾷品改良剤</p>
+                    </a>
+                  </li>
+                  <li></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="machining.html">受託加工</a></li>
+            <li><a href="archive.html">お知らせ</a></li>
+            <li class="parent">
+              <a href="company.html">企業情報</a>
+              <span class="plus"></span>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="btn-area">
+          <a class="header-btn orange" href="https://nagatagroup-recruit.org/" target="_blank">採用情報</a>
+          <a class="header-btn blue" href="contact.html">お問い合わせ</a>
+        </div>
+      </div>
+
+      <div class="sp-menu">
+        <button>
+          <img src="images/common/icon_sp-menu.svg" alt="">
+          <p class="en">menu</p>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer-menu">
+    <div class="drawer-menu_inner">
+      <div class="nav-wrap">
+        <nav>
+          <ul>
+            <li><a href="./">ホーム</a></li>
+            <li><a href="about.html">私たちについて</a></li>
+            <li class="parent">
+              <a href="products.html">製品紹介</a>
+              <ul class="child">
+                <li><a href="product-denpun.html">- ⼩⻨でん粉</a></li>
+                <li><a href="product-tanpaku.html">- ⼩⻨たん白</a></li>
+                <li><a href="product-improve.html">- 食品改良剤</a></li>
+              </ul>
+              <div class="plus"><span></span></div>
+            </li>
+            <li><a href="machining.html">受託加工</a></li>
+            <li><a href="archive.html">お知らせ</a></li>
+            <li class="parent">
+              <a href="company.html">
+                企業情報
+              </a>
+              <ul class="child">
+                <li><a href="quality.html">- 環境・品質への取り組み</a></li>
+                <li><a href="group.html">- グループ会社</a></li>
+              </ul>
+              <div class="plus"><span></span></div>
+            </li>
+          </ul>
+        </nav>
+      </div><!-- /.nav-wrap -->
+
+      <div class="btn-area">
+        <a class=" header-btn orange" href="https://nagatagroup-recruit.org/">採用情報</a>
+        <a class=" header-btn blue" href="contact.html">お問い合わせ</a>
+      </div>
+
+    </div><!-- /.drawer-menu_inner -->
+    <div class="nagata en">NAGATA GROUP</div>
+    <div class="bg-dradient"></div>
+  </div><!-- /.drawer-menu -->
+
+  <main>
+
+    <div class="p-under_kvbg">
+      <div class="under_kv p-company">
+        <div class="img-box obj-fit">
+          <picture>
+            <source srcset="images/company/fv_under-company_sp.jpg" media="(max-width: 750px)">
+            <img src="images/company/fv_under-company_pc.png" alt="">
+          </picture>
+          <p class="en vertical">COMPANY</p>
+        </div>
+        <div class="kv_ttl">
+          <h1>企業情報</h1>
+          <p class="en">COMPANY</p>
+        </div>
+      </div><!-- /.fv -->
+
+      <div class="breadcrumbs">
+        <div class="inner">
+          <ul>
+            <li><a href="./">トップ</a></li>
+            <li>企業情報</li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="company_ourstory">
+        <div class="block">
+          <div class="left">
+            <div class="ttl-wrap">
+              <div class="sub-ttl en">OUR STORY</div>
+              <div class="inline-wrap">
+                <h2>私たちの想い</h2>
+              </div>
+              <div class="copy">
+                <h3>地域とともに</h3>
+                <p class="en-helv u-pc">Together with the community</p>
+              </div>
+            </div>
+            <p>
+              私たちは1953年、「長田澱粉製造所」として創業して以来、この美しい宍粟市で事業を継続してまいりました。事業を営む宍粟市は、美しい山々が連なり清流が流れる自然豊かな素晴らしい地域です。この美しい地域を次世代に繋いでいくことは私たちの最重要課題の一つであり、具現化に向けた取り組みも加速して参ります。
+            </p>
+          </div>
+          <div class="right">
+            <div class="img-box">
+              <picture>
+                <source srcset="images/company/company_img01_sp.jpg" media="(max-width: 768px)">
+                <img src="images/company/company_img01.jpg" alt="">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="slider-container slider-txt_company">
+          <div class="slider-track">
+            <p class="en">TOGETHER WITH THE COMMUNITY</p>
+            <p class="en">TOGETHER WITH THE COMMUNITY</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+
+    <section class="company_table">
+      <div class="inner">
+        <div class="ttl-wrap">
+          <div class="sub-ttl en">COMPANY</div>
+          <h2>会社概要</h2>
+        </div>
+
+        <div class="block_table company">
+          <table class="tbl">
+            <colgroup>
+              <col class="col-1">
+              <col class="col-2">
+              <col class="col-3">
+            </colgroup>
+            <tr>
+              <th>商号</th>
+              <td colspan="2">長田産業株式会社</td>
+            </tr>
+            <tr>
+              <th>創業年月日</th>
+              <td colspan="2">昭和28年3月8日</td>
+            </tr>
+            <tr>
+              <th>設立年月日</th>
+              <td colspan="2">昭和49年4月10日</td>
+            </tr>
+            <tr>
+              <th>所在地</th>
+              <td colspan="2">
+                本社／兵庫県宍粟市山崎町千本屋215<br>
+                TEL 0790-62-1177㈹　FAX 0790-62-1219
+              </td>
+            </tr>
+            <tr>
+              <th>資本金</th>
+              <td colspan="2">2,500万円</td>
+            </tr>
+            <tr>
+              <th>土地</th>
+              <td colspan="2">延34,248㎡</td>
+            </tr>
+            <tr>
+              <th>建物</th>
+              <td colspan="2">延18,431㎡</td>
+            </tr>
+            <tr>
+              <th rowspan="6">役員</th>
+              <td>取締役会長</td>
+              <td>長田　博</td>
+            </tr>
+            <tr>
+              <td>代表取締役</td>
+              <td>田中　万里</td>
+            </tr>
+            <tr>
+              <td>常務取締役</td>
+              <td>長田　眞吾</td>
+            </tr>
+            <tr>
+              <td>取締役</td>
+              <td>前田　吉広</td>
+            </tr>
+            <tr>
+              <td>取締役（非常勤）</td>
+              <td>長田　伊知朗</td>
+            </tr>
+            <tr>
+              <td>監査</td>
+              <td>高田　真也</td>
+            </tr>
+            <tr>
+              <th>小麦でん粉</th>
+              <td colspan="2">営業品目が入ります</td>
+            </tr>
+            <tr>
+              <th>小麦たん白</th>
+              <td colspan="2">営業品目が入ります</td>
+            </tr>
+            <tr>
+              <th>食品改良剤</th>
+              <td colspan="2">営業品目が入ります</td>
+            </tr>
+            <tr>
+              <th>焼麩</th>
+              <td colspan="2">営業品目が入ります</td>
+            </tr>
+            <tr>
+              <th>酵素</th>
+              <td colspan="2">営業品目が入ります</td>
+            </tr>
+            <tr>
+              <th>社員数</th>
+              <td colspan="2">95名</td>
+            </tr>
+            <tr>
+              <th rowspan="4">取引銀行</th>
+              <td>三井住友銀行</td>
+              <td>龍野支店</td>
+            </tr>
+            <tr>
+              <td>中国銀行</td>
+              <td>姫路支店</td>
+            </tr>
+            <tr>
+              <td>西兵庫信用金庫</td>
+              <td>本店営業部</td>
+            </tr>
+            <tr>
+              <td>日本政策金融公庫</td>
+              <td>神戸支店</td>
+            </tr>
+          </table>
+        </div>
+        <div class="banner">
+          <div class="img-box">
+            <a href="group.html">
+              <picture>
+                <source srcset="images/company/company_group-banner_sp.png" media="(max-width: 768px)">
+                <img src="images/company/company_group-banner_pc.png" alt="グループ会社はこちら">
+              </picture>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="en vertical">COMPANY</div>
+    </section>
+
+    <section class="company_initiatives">
+      <div class="inner">
+        <div class="ttl-wrap02">
+          <div class="inline-wrap">
+            <img src="images/common/icon_sp-menu.svg" alt="">
+            <h2>さまざまな取り組み</h2>
+          </div>
+        </div>
+
+        <div class="block_image-txt initiatives">
+          <div class="left">
+            <div class="ttl">
+              <div class="en">Initiatives 01</div>
+              <h3>碧雲・菊亭での古民家再生事業</h3>
+            </div>
+            <p class="txt">
+              宍粟市の課題であった古民家をリノベーションし、町家ホテルとして運営しています。館内には人が集えるスペースを設け、地域コミュニティの再生や交流の場として活用されています。それにより観光資源としての価値が高まるとともに、移住希望者や若者世代とのつながりも生まれています。さらに、大阪大学と連携し、大学生が宍粟市で地域課題を学ぶフィールドワークを継続実施しています。また、大学生と小中学生合同の海外研修プログラムへの寄付により、子どもたちのグローバル視野を育んでいます。民間主導の学びと共創の場として注目されています。
+            </p>
+          </div>
+          <div class="right">
+            <div class="swiper initiatives-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-item img-box"><img src="images/company/company_initiatives-img01-1.jpg" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-item img-box"><img src="images/company/company_initiatives-img01-2.jpg" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-item img-box"><img src="images/company/company_initiatives-img01-3.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thumb-list">
+              <div class="thumb-item img-box">
+                <a class="thumb-link" href="javascript:void(0);" onclick="thumbnail(1)">
+                  <img src="images/company/company_initiatives-img01-1.jpg" alt="">
+                </a>
+              </div>
+              <div class="thumb-item img-box">
+                <a class="thumb-link" href="javascript:void(0);" onclick="thumbnail(2)">
+                  <img src="images/company/company_initiatives-img01-2.jpg" alt="">
+                </a>
+              </div>
+              <div class="thumb-item img-box">
+                <a class="thumb-link" href="javascript:void(0);" onclick="thumbnail(3)">
+                  <img src="images/company/company_initiatives-img01-3.jpg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block_image-txt initiatives">
+          <div class="left">
+            <div class="ttl">
+              <div class="en">Initiatives 02</div>
+              <h3>小学校への図書寄贈事業</h3>
+            </div>
+            <p class="txt">
+              地域の未来を担う子どもたちの可能性を広げる未来への投資として、全国の小学校へ厳選書籍を寄贈し、学びの場を豊かにしています。子どもたちが自ら学びを深め、未来を切り拓く力を育む場づくりを支援します。
+            </p>
+          </div>
+          <div class="right">
+            <div class="img-box"><img src="images/company/company_initiatives-img02.jpg" alt=""></div>
+          </div>
+        </div>
+
+        <div class="block_image-txt initiatives">
+          <div class="left">
+            <div class="ttl">
+              <div class="en">Initiatives 03</div>
+              <h3>理科実験教室の提供</h3>
+            </div>
+            <p class="txt">
+              次世代への架け橋として子どもの科学的好奇心を育むため、小学校で理科実験教室を開催し、理論と実践を通じて発見の喜びと学びを提供しています。
+            </p>
+          </div>
+          <div class="right">
+            <div class="img-box"><img src="images/company/company_initiatives-img03.jpg" alt=""></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="company_history">
+      <div class="inner">
+
+        <div class="ttl-wrap02">
+          <div class="inline-wrap">
+            <img src="images/common/icon_sp-menu.svg" alt="">
+            <h2>沿革</h2>
+          </div>
+        </div>
+
+        <div class="time-line">
+          <dl>
+            <dt class="en">1953</dt>
+            <dd>
+              <span>昭和28年 3月</span>
+              長田 孝　兵庫県宍粟郡山崎町千本屋215に長田でん粉製造所を創業
+            </dd>
+          </dl>
+          <dl>
+            <dt class="en">1962</dt>
+            <dd>
+              <span>昭和37年10月</span>
+              焼麩部門を創設、焼麩生産を開始する
+            </dd>
+          </dl>
+          <dl>
+            <dt class="en">1964</dt>
+            <dd>
+              <span>昭和39年 4月</span>
+              でん粉糊部門を創設、炊糊の生産を始める
+            </dd>
+          </dl>
+          <dl>
+            <dt class="en">1969</dt>
+            <dd>
+              <span>昭和44年 9月</span>
+              大阪市旭区中宮4丁目8の9に大阪営業所を開設<br>
+              化学糊（ユニポノール）の生産を開始する
+            </dd>
+          </dl>
+          <dl>
+            <dt class="en">1971</dt>
+            <dd>
+              <span>昭和46年 7月</span>
+              西ドイツ　アルテンバーガー社より粉砕機を購入
+            </dd>
+          </dl>
+          <dl>
+            <dt class="en">1973</dt>
+            <dd>
+              <div>
+                <span>昭和48年 6月</span>
+                バイタルグルテン（商品名フメリット）の生産を開始
+              </div>
+              <div>
+                <span>昭和48年 11月</span>
+                日清製粉株式会社と共同出資で小麦粉販売会社、姫路糧食㈱を設立（資本金1,300万円）
+              </div>
+            </dd>
+          </dl>
+          <dl>
+            <dt class="en">1974</dt>
+            <dd>
+              <span>昭和49年 4月</span>
+              長田産業株式会社に改組（資本金1,000万円）
+            </dd>
+          </dl>
+          <dl>
+            <dt class="en">1975</dt>
+            <dd>
+              <span>昭和50年 8月</span>
+              飼料の製造販売、汚水処理技術開発の会社 協和資糧株式会社を設立（資本金500万円）
+            </dd>
+          </dl>
+          <dl>
+            <dt class="en">1978</dt>
+            <dd>
+              <span>昭和53年 7月</span>
+              ペースト状植物性たん白の製造開始
+            </dd>
+          </dl>
+          <dl>
+            <dt class="en">1980</dt>
+            <dd>
+              <span>昭和55年 4月</span>
+              状植物性たん白の製造開始
+            </dd>
+          </dl>
+          <dl>
+            <dt class="en">1982</dt>
+            <dd>
+              <span>昭和28年 3月</span>
+              長田 孝　兵庫県宍粟郡山崎町千本屋215に長田でん粉製造所を創業
+            </dd>
+          </dl>
+        </div>
+
+      </div>
+      <div class="en vertical">HYSTORY</div>
+    </section>
+
+
+
+    <div class="cta">
+      <div class="block">
+        <div class="left">
+          <a href="company.html">
+            <p>企業情報</p>
+            <span class="en">COMPANY</span>
+            <div class="line"></div>
+          </a>
+        </div>
+        <div class="right">
+          <a href="contact.html">
+            <p>お問い合わせ<span class="u-pc">・</span><br class="u-sp">資料請求</p>
+            <span class="en">CONTACT</span>
+            <div class="line"></div>
+          </a>
+        </div>
+      </div>
+      <div class="slider-container slider-txt_cta">
+        <div class="slider-track">
+          <p class="en">TOWARDS THE UNTAPPED POTENTIAL OF WHEAT</p>
+          <p class="en">TOWARDS THE UNTAPPED POTENTIAL OF WHEAT</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="back-to">
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12.756" height="15.096" viewBox="0 0 12.756 15.096">
+          <g id="グループ_410592" data-name="グループ 410592" transform="translate(-30.563 -29.452)">
+            <path id="パス_44828" data-name="パス 44828" d="M-9695.2,840.308l5.672,5.671-5.672,5.671"
+              transform="translate(-809.038 -9658.665) rotate(-90)" fill="none" stroke="#49abe0" stroke-width="2" />
+            <line id="線_2023" data-name="線 2023" y1="13" transform="translate(36.941 31.548)" fill="none"
+              stroke="#49abe0" stroke-width="2" />
+          </g>
+        </svg>
+      </a>
+    </div>
+    <div class="inner">
+      <div class="footer-columns">
+        <div class="col01">
+          <div class="logo img-box"><a href="./"><img src="images/common/logo.svg" alt="長田産業株式会社"></a></div>
+          <div class="txt">
+            <p>〒671-2544 <br class="u-sp">兵庫県宍粟市山崎町千本屋215</p>
+            <a href="policy.html">プライバシーポリシー</a>
+          </div>
+          <div class="copyright"><small class="en">Copyright © NAGATA GROUP HOLDINGS, LTD. All rights reserved.</small>
+          </div>
+        </div>
+        <div class="col02">
+          <nav>
+            <ul>
+              <li><a href="./">ホーム</a></li>
+              <li><a href="about.html">私たちについて</a></li>
+              <li>
+                <a href="products.html">
+                  製品紹介
+                </a>
+                <ul>
+                  <li><a href="https://ldhtestnagata.tech/" target="_blank">LDH</a></li>
+                  <li><a href="https://mugibase.studio.site/" target="_blank">MUGIBASE</a></li>
+                  <li><a href="product-denpun.html">小麦でん粉</a></li>
+                  <li><a href="product-tanpaku.html">小麦たん⽩</a></li>
+                  <li><a href="product-improve.html">⾷品改良剤</a></li>
+                </ul>
+              </li>
+              <li><a href="machining.html">受託加工</a></li>
+              <li><a href="archive.html">お知らせ</a></li>
+              <li>
+                <a href="company.html">
+                  企業情報
+                </a>
+                <ul class="parent02">
+                  <li><a href="quality.html">環境・品質への取り組み</a></li>
+                  <li><a href="group.html">グループ会社</a></li>
+                </ul>
+              </li>
+              <li><a href="https://nagatagroup-recruit.org/" target="_blank">採用情報</a></li>
+              <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script>
+    //商品詳細サムネイルスライダー
+    const swiperitem = new Swiper(".initiatives-slider", {
+      loop: true,
+    });
+    function thumbnail(index) {
+      swiperitem.slideTo(index);
+    }
+  </script>
+
+</body>
+
+</html>

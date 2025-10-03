@@ -548,31 +548,31 @@ if (parallaxElements.length > 0) {
 //////////////////////////////////////////////////////
 //さりげないパララックス（背景画像）
 //////////////////////////////////////////////////////
-const parallaxBgElements = document.querySelectorAll(".parallax-bg");
-if (parallaxBgElements.length > 0) {
-  parallaxBgElements.forEach((element) => {
-    let yValue = 20;
-    element.classList.forEach((cls) => {
-      if (/^y-?\d+$/.test(cls)) {
-        yValue = parseInt(cls.replace("y", ""), 10);
-      }
-    });
-    gsap.fromTo(
-      element,
-      { backgroundPosition: `center ${50 + yValue}%` },
-      {
-        backgroundPosition: `center ${50 - yValue}%`,
-        ease: "none",
-        scrollTrigger: {
-          trigger: element,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
-      }
-    );
-  });
-}
+// const parallaxBgElements = document.querySelectorAll(".parallax-bg");
+// if (parallaxBgElements.length > 0) {
+//   parallaxBgElements.forEach((element) => {
+//     let yValue = 20;
+//     element.classList.forEach((cls) => {
+//       if (/^y-?\d+$/.test(cls)) {
+//         yValue = parseInt(cls.replace("y", ""), 10);
+//       }
+//     });
+//     gsap.fromTo(
+//       element,
+//       { backgroundPosition: `center ${50 + yValue}%` },
+//       {
+//         backgroundPosition: `center ${50 - yValue}%`,
+//         ease: "none",
+//         scrollTrigger: {
+//           trigger: element,
+//           start: "top bottom",
+//           end: "bottom top",
+//           scrub: true,
+//         },
+//       }
+//     );
+//   });
+// }
 
 //////////////////////////////////////////////////////
 //ファーストビューアニメーション
@@ -611,34 +611,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const tl = gsap.timeline({ defaults: { duration: 0.8, ease: "power3.out" } });
 
+  // 1. fv01
   tl.to(fv01, { opacity: 1, y: 0 });
 
+  // 2. fv04
   if (fv04) {
     tl.to(fv04, { opacity: 1, duration: 1.2, ease: "sine.in" }, "+=0.1");
   }
 
+  // 3. fv06とheaderが同時
   if (fv06) {
-    tl.to(fv06, { opacity: 1, duration: 0.6, ease: "sine.in" }, "-=0.6");
+    tl.to(fv06, { opacity: 1, duration: 0.6, ease: "sine.in" }, "-=0.2");
   }
-
-  const groupThree = [fv02, fv03, fv05, fv07].filter(Boolean);
-  if (groupThree.length) {
-    tl.to(groupThree, { opacity: 1, y: 0 }, "+=0.1");
-    if (header) {
-      tl.fromTo(
-        header,
-        { opacity: 0, y: -20 },
-        { opacity: 1, y: 0, clearProps: "transform,opacity" },
-        "<"
-      );
-    }
-  } else if (header) {
+  if (header) {
     tl.fromTo(
       header,
       { opacity: 0, y: -20 },
-      { opacity: 1, y: 0, clearProps: "transform,opacity" },
-      "+=0.1"
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        clearProps: "transform,opacity",
+      },
+      "<"
     );
+  }
+
+  // 4. それ以外（fv02, fv03, fv05, fv07）
+  const groupOthers = [fv02, fv03, fv05, fv07].filter(Boolean);
+  if (groupOthers.length) {
+    tl.to(groupOthers, { opacity: 1, y: 0 }, "+=0.1");
   }
 
   if (header) {
@@ -647,3 +649,74 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   if (typeof gsap === "undefined") {
+//     return;
+//   }
+//   const fv01 = document.querySelector(".fvanime01");
+//   if (!fv01) {
+//     return;
+//   }
+//   const fv02 = document.querySelector(".fvanime02");
+//   const fv03 = document.querySelector(".fvanime03");
+//   const fv04 = document.querySelector(".fvanime04");
+//   const fv05 = document.querySelector(".fvanime05");
+//   const fv06 = document.querySelector(".fvanime06");
+//   const fv07 = document.querySelector(".fvanime07");
+//   const header = document.querySelector("header");
+
+//   const fvAll = [fv01, fv02, fv03, fv04, fv05, fv06, fv07].filter(Boolean);
+//   gsap.set(fvAll, { opacity: 0, y: 30 });
+
+//   // fv04とfv06は位置を変えずにフェードインのみ
+//   if (fv04) {
+//     gsap.set(fv04, { opacity: 0 });
+//   }
+//   if (fv06) {
+//     gsap.set(fv06, { opacity: 0 });
+//   }
+
+//   if (header) {
+//     header.classList.add("is-animating");
+//     gsap.set(header, { opacity: 0 });
+//   }
+
+//   const tl = gsap.timeline({ defaults: { duration: 0.8, ease: "power3.out" } });
+
+//   tl.to(fv01, { opacity: 1, y: 0 });
+
+//   if (fv04) {
+//     tl.to(fv04, { opacity: 1, duration: 1.2, ease: "sine.in" }, "+=0.1");
+//   }
+
+//   if (fv06) {
+//     tl.to(fv06, { opacity: 1, duration: 0.6, ease: "sine.in" }, "-=0.6");
+//   }
+
+//   const groupThree = [fv02, fv03, fv05, fv07].filter(Boolean);
+//   if (groupThree.length) {
+//     tl.to(groupThree, { opacity: 1, y: 0 }, "+=0.1");
+//     if (header) {
+//       tl.fromTo(
+//         header,
+//         { opacity: 0, y: -20 },
+//         { opacity: 1, y: 0, clearProps: "transform,opacity" },
+//         "<"
+//       );
+//     }
+//   } else if (header) {
+//     tl.fromTo(
+//       header,
+//       { opacity: 0, y: -20 },
+//       { opacity: 1, y: 0, clearProps: "transform,opacity" },
+//       "+=0.1"
+//     );
+//   }
+
+//   if (header) {
+//     tl.call(function () {
+//       header.classList.remove("is-animating");
+//     });
+//   }
+// });

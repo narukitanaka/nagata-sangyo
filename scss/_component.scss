@@ -10,6 +10,7 @@ component
     // @include c.p-font(v.pxtovw(16));
     font-size: clamp(1rem, v.pxtovw(16), 2.2rem);
     font-weight: 600;
+    letter-spacing: 0.08em;
     background: v.$gradient01;
     -webkit-background-clip: text;
     background-clip: text;
@@ -36,6 +37,9 @@ component
     img {
       padding-top: v.pxtovw(7);
       width: v.pxtovw(12);
+      @include c.mq() {
+        width: v.pxtovw_sp(18);
+      }
     }
     h2 {
       position: relative;
@@ -46,6 +50,10 @@ component
       letter-spacing: 0.06em;
       line-height: 2;
       padding-left: v.pxtovw(21);
+      @include c.mq() {
+        font-size: v.pxtovw_sp(44);
+        padding-left: v.pxtovw_sp(13);
+      }
       &::before {
         content: "";
         width: 200rem;
@@ -55,6 +63,9 @@ component
         transform: traslateY(-50%);
         left: calc(100% + v.pxtovw(24));
         background-color: #cecece;
+        @include c.mq() {
+          left: calc(100% + v.pxtovw_sp(37));
+        }
       }
     }
   }
@@ -70,6 +81,10 @@ component
     text-align: center;
     border-top: 1px solid #cecece;
     border-bottom: 1px solid #cecece;
+    @include c.mq() {
+      font-size: v.pxtovw_sp(36);
+      padding: v.pxtovw_sp(27) 0;
+    }
   }
 }
 .ttl-wrap04 {
@@ -187,8 +202,17 @@ component
       right: v.pxtovw(39);
       width: v.pxtovw(13);
       transition: all 0.3s;
+      @include c.mq() {
+        right: v.pxtovw_sp(60);
+        width: v.pxtovw_sp(26);
+      }
       path {
         transition: all 0.3s;
+      }
+    }
+    &:before {
+      @include c.mq() {
+        box-shadow: none;
       }
     }
     &:hover {
@@ -224,6 +248,8 @@ component
   transition: all 0.3s;
   @include c.mq() {
     font-size: v.pxtovw_sp(28);
+    aspect-ratio: 1/0.16;
+    padding-left: v.pxtovw_sp(95);
   }
   &::before {
     content: "";
@@ -236,6 +262,10 @@ component
     border-radius: 50%;
     background-color: #fff;
     transition: all 0.3s;
+    @include c.mq() {
+      left: v.pxtovw_sp(40);
+      width: v.pxtovw_sp(15);
+    }
   }
   &::after {
     content: "";
@@ -371,7 +401,8 @@ component
       @include c.p-font(v.pxtovw(14));
       font-weight: 500;
       @include c.mq() {
-        @include c.p-font(v.pxtovw_sp(16));
+        // @include c.p-font(v.pxtovw_sp(16));
+        font-size: max(1rem, v.pxtovw_sp(16));
       }
     }
     li {
@@ -459,28 +490,49 @@ component
     padding: v.pxtovw(10) 0;
     border-bottom-left-radius: v.pxtovw(10);
     border-bottom-right-radius: v.pxtovw(10);
+    @include c.mq() {
+      padding: v.pxtovw_sp(16) 0;
+      border-bottom-left-radius: v.pxtovw_sp(10);
+      border-bottom-right-radius: v.pxtovw_sp(10);
+    }
   }
 }
 .item02 {
   border: 1px solid v.$sub-color01;
   border-radius: v.pxtovw(10);
   overflow: hidden;
+  @include c.mq() {
+    border-radius: v.pxtovw_sp(10);
+  }
   .ttl {
     text-align: center;
     color: #fff;
     padding: v.pxtovw(10) 0;
-    // border-top-left-radius: v.pxtovw(10);
-    // border-top-right-radius: v.pxtovw(10);
     background-color: v.$sub-color01;
+    @include c.mq() {
+      padding: v.pxtovw_sp(15) 0;
+    }
   }
 }
 
 .block_image-txt {
   @include c.flex(center, center);
+  @include c.mq() {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .left {
     width: v.pxtovw(500);
     flex-shrink: 0;
+    @include c.mq() {
+      width: 100%;
+      display: contents;
+    }
     .ttl {
+      @include c.mq() {
+        width: 100%;
+        order: 1;
+      }
       .en {
         display: inline-block;
         @include c.p-font(v.pxtovw(16));
@@ -490,23 +542,42 @@ component
         background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: v.pxtovw(9);
+        @include c.mq() {
+          font-size: v.pxtovw_sp(24);
+          margin-bottom: v.pxtovw_sp(10);
+        }
       }
       h3 {
         font-family: "Zen Old Mincho", serif;
         font-size: v.pxtovw(26);
+        font-weight: 500;
         padding-bottom: v.pxtovw(10);
         border-bottom: 1px solid #cecece;
+        @include c.mq() {
+          font-size: v.pxtovw_sp(36);
+          padding-bottom: v.pxtovw_sp(17);
+        }
       }
     }
     .txt {
       line-height: 2.25;
+      @include c.mq() {
+        order: 3;
+      }
     }
   }
   .right {
     flex-grow: 1;
+    @include c.mq() {
+      order: 2;
+      margin-bottom: v.pxtovw_sp(40);
+    }
     .img-box {
       border-radius: v.pxtovw(14);
       overflow: hidden;
+      @include c.mq() {
+        border-radius: v.pxtovw_sp(14);
+      }
     }
   }
   &.reverse {
